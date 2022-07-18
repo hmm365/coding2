@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript기본 규칙</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        /* 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+        /* 헤더영역 */
+        #header {
+            padding: 2vw;
+            border-bottom: 1px dashed #cdcdcd;
+        }
+        #header h1 {
+            font-size: 4vw;
+            margin-bottom: 2vw;
+        }
+        #header nav ul li{
+            display: inline-block;
+        }
+        #header nav ul li a{
+            border: 1px solid #000;
+            padding: 0.6vw 1vw 0.3vw 1vw;
+            transition: all 0.3s;
+            margin-bottom: 0.7vw;
+            display: inline-block;
+        }
+        #header nav ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* contents 영역 */
+        #contents {
+            padding: 2vw;
+            border-bottom: 1px dashed #cdcdcd;
+        }
+        #contents h2 {
+            margin-bottom: 10px;
+        }
+        #contents .numList {
+            margin-left: 30px;
+        }
+        #contents .numList li {
+            list-style-type: decimal-leading-zero; 
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* 모바일용 미디어쿼리 */
+        @media (max-width: 800px) {
+            #header h1 {
+            font-size: 40px;
+            }
+            #header nav ul li a{
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Javascript</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript/index.html">메인 </a></li>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 출력하기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contents">
+        <h2>자바스크립트 기본 규칙</h2>
+        <ol class="numList">
+            <li>하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다.
+                세미콜론(;)을 붙여 주지 않아도 상관은 없으나, 끝을 알리기위해 쓰입니다.
+            </li>
+            <li>대소문자를 구분합니다.</li>
+            <li>가독성을 위해 들여쓰기를 사용합니다.</li>
+            <li>주석(comment) 처리 방법에는 한 줄 주석처리와 여러 줄 주석처리가 있습니다.</li>             
+        </ol>
+    </section>
+</body>
+</html>
