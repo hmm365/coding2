@@ -60,6 +60,81 @@
             margin-bottom: 10px;
             line-height: 1.6;
         }
+        /* contents 영역 */
+        #contents {
+            padding: 2vw;
+        }
+        #contents .menu {
+            border-bottom: 1px dashed #dedede;
+            padding-bottom: 2vw;
+        }
+        #contents .menu ul {
+            
+        }
+        #contents .menu ul li {
+            list-style: none;
+            display: inline;
+        }
+        #contents .menu ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #000;
+            padding: 0.6vw 1vw; 
+            background-color: #000;
+            word-break: keep-all;
+            margin-bottom: 0.7vw;
+            margin-top: 0.7vw;
+        }
+        #contents .menu ul li a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+
+        .article .box {
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
+
+        .article {
+            padding: 2vw 0;
+            line-height: 1.6;
+        }
+        .article p {
+            margin-bottom: 10px;
+        }
+        .article h2 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article .table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .article .table .center {
+            text-align: center;
+        }
+        .article .table tr th{
+            border: 1px solid #dedede;
+            padding: 10px;
+            font-weight: normal;
+            background-color: #f5f5f5;
+        }
+        .article .table tr td {
+            border: 1px solid #dedede;
+            padding: 10px;
+        }
+        .article .box {
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
 
         /* 모바일용 미디어쿼리 */
         @media (max-width: 800px) {
@@ -96,6 +171,36 @@
             <li>가독성을 위해 들여쓰기를 사용합니다.</li>
             <li>주석(comment) 처리 방법에는 한 줄 주석처리와 여러 줄 주석처리가 있습니다.</li>             
         </ol>
+        <article class="article">
+            <h2>05. 기본명령어</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>분류</th>
+                        <th>명령어</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">입력</td>
+                        <td>prompt('입력 제목', '입력 내용')</td>
+                    </tr>
+                    <tr>
+                        <td class="center" rowspan="3">출력</td>
+                        <td>document.write('출력 내용')</td>
+                    </tr>
+                        <td>alert('출력 내용')</td>
+                    <tr>
+                        <td>console.log('출력 내용')</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td class="center">확인</td>
+                        <td>confirm() </td>
+                    </tr>
+                </tbody>
+            </table>
     </section>
 </body>
 </html>

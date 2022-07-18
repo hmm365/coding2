@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>HTML 기초</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        /* 리셋 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+
+        /* 헤더 */
+        #header {
+            padding: 2vw;
+            border-bottom: 1px dashed #dedede;
+        }
+        #header h1{
+            font-size: 4vw;
+            margin-bottom: 2vw;
+        }
+        #header nav {
+
+        }
+        #header nav ul {
+            
+        }
+        #header nav ul li{
+            list-style: none;
+            display: inline;
+        }
+        #header nav ul li a{
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #000;
+            padding: 0.6vw 1vw;
+            display: inline-block;
+        }
+        #header nav ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* contents 영역 */
+        #contents {
+            padding: 2vw;
+        }
+        #contents .menu {
+            border-bottom: 1px dashed #dedede;
+            padding-bottom: 2vw;
+        }
+        #contents .menu ul {
+            
+        }
+        #contents .menu ul li {
+            list-style: none;
+            display: inline;
+        }
+        #contents .menu ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #000;
+            padding: 0.6vw 1vw; 
+            background-color: #000;
+            word-break: keep-all;
+            margin-bottom: 0.7vw;
+            margin-top: 0.7vw;
+        }
+        #contents .menu ul li a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        .article {
+            padding: 2vw 0;
+            line-height: 1.6;
+        }
+        .article p {
+            margin-bottom: 10px;
+        }
+        .article h2 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article .table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .article .table .center {
+            text-align: center;
+        }
+        .article .table tr th{
+            border: 1px solid #dedede;
+            padding: 10px;
+            font-weight: normal;
+            background-color: #f5f5f5;
+        }
+        .article .table tr td {
+            border: 1px solid #dedede;
+            padding: 10px;
+        }
+        .article .box {
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
+        
+
+
+        /* 모바일 */
+        @media (max-width: 800px) {
+            #header h1{
+                padding: 16px;
+                font-size: 40px;
+            }
+            #header nav ul li a {
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+            #contents .menu ul li a{
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#">기초</a></li>
+                <li><a href="#">주제</a></li>
+                <li><a href="#">알파벳</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contents">
+        <nav class="menu">
+            <ul>
+                <li><a href="easy.html">기본 구성</a></li>
+                <li><a href="markup.html">기본 규칙</a></li>
+                <li><a href="w3c.html">W3C validator</a></li>
+                <li><a href="semantic.html">시멘틱 마크업</a></li>
+                <li><a href="#">블록/인라인 요소</a></li>
+        </nav>
+        <article class="article">
+            <h2>semantic markup 기본</h2>
+            <p>시각적으로 정보를 전달하는것도 중요하지만 음성으로도 전달해주는것도 중요하기에 시멘틱 마크업이 생겼습니다.</p>
+
+            <h3>2. 요소는 제대로 중첩되어야 합니다.</h3>
+            <p class="box">
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Document&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;반응형웹<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+            </p>
+            <p>만약 '반응형웹'이 HTML 문서에서 제목으로 사용된고 가정 할경우 위 예시처럼 스크린 리더 에서는 그저'반응형웹' 이라고 읽어주기 때문에 제목인지 알수가없습니다. </p>
+
+        </article>
+    </section>
+</body>
+</html>
