@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript기본 규칙</title>
+
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Javascript</h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 출력하기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="easy.html">기본 규칙</a></li>
+                <li><a href="communication.html">연산자</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <section id="contents">
+        <h2>자바스크립트 연산자</h2>
+        <article class="article">
+            <h2>01. 산술연산자</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="center">산술연산자 종류</th>
+                        <th class="center">속성 설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center" rowspan="2">+</td>
+                        <td>더하기 연산을 할때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>문자와 문자, 문자와 변수 등을 연결할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">-</td>
+                        <td>빼기 연산을 할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">*</td>
+                        <td>곱하기 연산을 할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">/</td>
+                        <td>몫을 구 할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">%</td>
+                        <td>나머지를 구할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">++</td>
+                        <td>1씩 증가시킬때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">--</td>
+                        <td>1씩 감소시킬때 사용합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>02. 대입연산자</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="center">대입 연산자 종류</th>
+                        <th class="center">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">=</td>
+                        <td>우변의 값을 좌변의 변수에 대입 합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">+=</td>
+                        <td>num = num + 값 과 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">-=</td>
+                        <td>num = num - 값 과 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">*</td>
+                        <td>num = num * 값 과 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">/</td>
+                        <td>num = num / 값 과 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">%</td>
+                        <td>num = num % 값 과 같습니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>03. 비교연산자</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="center">비교 연산자 종류</th>
+                        <th class="center">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">&lt;</td>
+                        <td>a &lt; b 가 참이면 true, 거짓이면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">&gt;</td>
+                        <td>a &gt; b 가 참이면 true, 거짓이면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">&lt;=</td>
+                        <td>a &lt; b 가 참이면 true, 거짓이면 false가 됩니다</td>
+                    </tr>
+                    <tr>
+                        <td class="center">&gt;=</td>
+                        <td>a &gt; b 가 참이면 true, 거짓이면 false가 됩니다</td>
+                    </tr>
+                    <tr>
+                        <td class="center">==</td>
+                        <td>
+                            a == b 가 같으면 true, 않같으면 false가 됩니다.<br>
+                            == 는 데이터 타입은 비교하지 않습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">!=</td>
+                        <td>a == b 가 안같으면 true, 같으면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">===</td>
+                        <td>a == b 가 데이터타입과 데이터가 같으면 true, 않같으면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">!==</td>
+                        <td>a == b 가 데이터타입 이나 데이터가 않같으면 true, 같으면 false가 됩니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>04. 논리연산자</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="center">논리 연산자 종류</th>
+                        <th class="center">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">&& (AND 연산자)</td>
+                        <td>a && b , a와 b모두 ture 일때 true가 됨니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">|| (OR 연산자)</td>
+                        <td>
+                            a || b , a와 b 중 하나만 ture 일때 true가 됩니다.<br>
+                            모두 false 일때 false 됩니다. 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">! (NOT 연산자)</td>
+                        <td>a 가 true 이면 false, a가 false면 true로 바꾸어줍니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    </section>
+    <script>hljs.highlightAll();</script> 
+</body>
+</html>
