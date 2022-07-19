@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트 : 데이터 저장하기</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+    <script src="assets/js/highlight.min.js"></script>
 </head>
 <body>
     <header id="header">
@@ -35,26 +37,71 @@
     <main id="main">
         <div class="main_menu">
             <ul>
-                <li><a href="#">01. 변수 : 데이터 저장</a></li>
-                <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
-                <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-                <li><a href="#">04. 변수 : 지역변수 + 전역변수 + 매개변수</a></li>
-                <li><a href="#">05. 상수 : 데이터 저장 + 데이터 변경X</a></li>
-                <li><a href="#">06. 배열 : 여러개의 데이터를 저장 : 표현 방법 1</a></li>
-                <li><a href="#">07. 배열 : 여러개의 데이터를 저장 : 표현 방법 2</a></li>
-                <li><a href="#">08. 배열 : 여러개의 데이터를 저장 : 표현 방법 3</a></li>
-                <li><a href="#">09. 배열 : 여러개의 데이터를 저장 : 표현 방법 4</a></li>
-                <li><a href="#">10. 객체 : 데이터를 저장(키와 값) : 표현 방법1</a></li>
-                <li><a href="#">11. 객체 : 데이터를 저장(키와 값) : 표현 방법2</a></li>
-                <li><a href="#">12. 객체 : 데이터를 저장(키와 값) : 표현 방법3</a></li>
-                <li><a href="#">13. 객체 : 데이터를 저장(키와 값) : 표현 방법4</a></li>
-                <li><a href="#">14. 객체 : 데이터를 저장(키와 값) : 표현 방법5</a></li>
-                <li><a href="#">15. 객체 : 데이터를 저장(키와 값) : 표현 방법6</a></li>
-                <li><a href="#">16. 객체 : 데이터를 저장(키와 값) : 표현 방법7</a></li>
-                <li><a href="#">17. 객체 : 데이터를 저장(키와 값) : 표현 방법8</a></li>
+                <li><a href="#sample01">01. 변수 : 데이터 저장</a></li>
+                <li><a href="#sample02">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
+                <li><a href="#sample03">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+                <li><a href="#sample04">04. 변수 : 지역변수 + 전역변수 + 매개변수</a></li>
+                <li><a href="#sample05">05. 상수 : 데이터 저장 + 데이터 변경X</a></li>
+                <li><a href="#sample06">06. 배열 : 여러개의 데이터를 저장 : 표현 방법 1</a></li>
+                <li><a href="#sample07">07. 배열 : 여러개의 데이터를 저장 : 표현 방법 2</a></li>
+                <li><a href="#sample08">08. 배열 : 여러개의 데이터를 저장 : 표현 방법 3</a></li>
+                <li><a href="#sample09">09. 배열 : 여러개의 데이터를 저장 : 표현 방법 4</a></li>
+                <li><a href="#sample10">10. 객체 : 데이터를 저장(키와 값) : 표현 방법1</a></li>
+                <li><a href="#sample11">11. 객체 : 데이터를 저장(키와 값) : 표현 방법2</a></li>
+                <li><a href="#sample12">12. 객체 : 데이터를 저장(키와 값) : 표현 방법3</a></li>
+                <li><a href="#sample13">13. 객체 : 데이터를 저장(키와 값) : 표현 방법4</a></li>
+                <li><a href="#sample14">14. 객체 : 데이터를 저장(키와 값) : 표현 방법5</a></li>
+                <li><a href="#sample15">15. 객체 : 데이터를 저장(키와 값) : 표현 방법6</a></li>
+                <li><a href="#sample16">16. 객체 : 데이터를 저장(키와 값) : 표현 방법7</a></li>
+                <li><a href="#sample17">17. 객체 : 데이터를 저장(키와 값) : 표현 방법8</a></li>
             </ul>
         </div>
-        <div id="main_script"></div>
+        <div class="main_sample">
+            <div id="sample01" class="sample">
+                <h3>01. 변수 : 데이터 저장</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수, 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+        var x = 100;             //변수 x저장소에 숫자 100 저장함
+        var y = 200;             //변수 x저장소에 숫자 200 저장함
+        var z = "javascript";    //변수 x저장소에 문자열 "javascript" 저장함
+                 
+        document.write("01. 변수 ");
+        document.write(x);  //출력
+        document.write(y);  //출력
+        document.write(z);  //출력
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample01_result">
+
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample02" class="sample"></div>
+            <div id="sample03" class="sample"></div>
+            <div id="sample04" class="sample"></div>
+            <div id="sample05" class="sample"></div>
+            <div id="sample06" class="sample"></div>
+            <div id="sample07" class="sample"></div>
+            <div id="sample08" class="sample"></div>
+            <div id="sample09" class="sample"></div>
+            <div id="sample10" class="sample"></div>
+            <div id="sample11" class="sample"></div>
+            <div id="sample12" class="sample"></div>
+            <div id="sample13" class="sample"></div>
+            <div id="sample14" class="sample"></div>
+            <div id="sample15" class="sample"></div>
+            <div id="sample16" class="sample"></div>
+            <div id="sample17" class="sample"></div>
+        </div>
         <div id="main_desc"></div>
     </main>
     <!-- //main -->
@@ -62,5 +109,17 @@
         <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
     </footer>
     <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+        {
+            var x = 100;
+            var y = 200;
+            var z = "javascript";
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
+        }
+    </script>
 </body>
 </html>
