@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript기본 규칙</title>
+
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <style>
         /* 리셋 */
         * {
@@ -136,6 +139,26 @@
             padding: 15px;
         }
 
+        .script {
+
+        }
+        .sample {
+            margin-bottom: 16px;
+        }
+        .sample h2{
+            font-weight: normal;
+            background-color: #f5f5f5;
+            font-size: 20px;
+            padding: 15px 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        .sample .code {
+            width: 100%;
+            background-color: #000;
+            border-radius: 0 0 10px 10px;
+            color: #fff;
+        }
+
         /* 모바일용 미디어쿼리 */
         @media (max-width: 800px) {
             #header h1 {
@@ -150,10 +173,9 @@
 </head>
 <body>
     <header id="header">
-        <h1>Javascript</h1>
+        <h1><a href="index.html">Javascript</a></h1>
         <nav>
             <ul>
-                <li><a href="javascript/index.html">메인 </a></li>
                 <li><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 출력하기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
@@ -223,6 +245,32 @@
                     </tr>
                 </tbody>
             </table>
+
+<div class="script">
+            <div id="sample01" class="sample">
+                <h2>기본 명렁어</h2>
+                <div class="code">
+<pre><code class="Language-js">{
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;script&gt;
+            promt('출력 페이지 수를 입력하세요!',''); // ''는 작은 따옴표 두 개 입니다.
+            alert('자바스크립트');
+            document.write('자바스크립트');
+            console.log('자바스크립트');
+            confirm('정말 삭제 하시겠습니까?');         
+        &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+        &lt;/gtml&gt;  
+}
+</code></pre>
+                </div>
+            </div>
     </section>
+    <script>hljs.highlightAll();</script> 
 </body>
 </html>
