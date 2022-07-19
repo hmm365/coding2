@@ -149,28 +149,29 @@
             <div id="sample04" class="sample">
                 <h3>04. 변수 : 지역변수 + 전역변수 + 매개변수</h3>
                 <p>
-                    변수는 괄호안에서만 동작하는 지역변수 모든곳에서 동작하는 전역변수가 있습니다..
+                    전역변수는 함수 블록{} 밖이나 안에서 자유롭게 사용 가능하지만,
+                    지역변수는 함수 블록{} 안에서만 사용가능합니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
-    let x = 100; // x 에 100저장
-    let y = 200; // y 에 200저장
-    let t = "hi"; // t 에 문자열 "hi" 저장
+    let x1 = 100; // x 에 100저장
+    let y1 = 200; // y 에 200저장
+    let t1 = "hi"; // t 에 문자열 "hi" 저장
     function func() { // 함수 생성
-        let x = 300; // 지역변수 x 에 300저장
-        y = 400; // 전역변수 y 에 400저장
-        let t = "javascript"; // 지역변수 t 에 문자열 "javascript" 저장
+        let x1 = 300; // 지역변수 x 에 300저장
+        y1 = 400; // 전역변수 y 에 400저장
+        let t1 = "javascript"; // 지역변수 t 에 문자열 "javascript" 저장
 
         document.write("함수안"); 
-        document.write(x);  //출력
-        document.write(y);  //출력
-        document.write(z);  //출력
+        document.write(x1);  //출력
+        document.write(y1);  //출력
+        document.write(z1);  //출력
     }
         func(); // 함수 호출
         document.write("함수밖");
-        document.write(x);  //출력
-        document.write(y);  //출력
-        document.write(z);  //출력
+        document.write(x1);  //출력
+        document.write(y1);  //출력
+        document.write(z1);  //출력
 }
 </code></pre>
                 </div>
@@ -186,16 +187,17 @@
             <div id="sample05" class="sample">
                 <h3>05. 상수 : 데이터 저장 + 데이터 변경X</h3>
                 <p>
-                    상수는 데이터를 저장할수 있지만 데이터를 변경할 수 없습니다..
+                    상수는 이미 선언한 상수에 대해 중복해서 선언 할수 없고,
+                    상수의 값은 재지정할 수도 없습니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
     const x = 100; // 상수 x 100 저장
-    const y = 200; // 상수 y 200 저장
+    const y = "javascript"; // 상수 y 200 저장
 
     document.write(y);  //출력
-    x += 200;
-    document.write(x); // 출력
+    x += 200; // 재정의할수 없음
+    document.write(x); // 출력 오류
 }
 </code></pre>
                 </div>
@@ -208,21 +210,257 @@
                 </div>
             </div>
             <!-- //sample05 -->
+            <div id="sample06" class="sample">
+                <h3>06. 배열 : 여러개의 데이터를 저장 : 표현 방법 1</h3>
+                <p>
+                    배열은 여러개의 데이터를 저장할수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = new Array();
+    arr[0] = 10; //0번째 arr 변수에 10을 저장
+    arr[1] = 30; //1번째 arr 변수에 30을 저장
+    arr[2] = "javascript"; //2번째 arr 변수에 javascript을 저장
+    
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]); 
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample06_result"></div>
+                    </details>
+                </div>
             </div>
-            <div id="sample06" class="sample"></div>
-            <div id="sample07" class="sample"></div>
-            <div id="sample08" class="sample"></div>
-            <div id="sample09" class="sample"></div>
-            <div id="sample10" class="sample"></div>
-            <div id="sample11" class="sample"></div>
-            <div id="sample12" class="sample"></div>
-            <div id="sample13" class="sample"></div>
-            <div id="sample14" class="sample"></div>
-            <div id="sample15" class="sample"></div>
-            <div id="sample16" class="sample"></div>
-            <div id="sample17" class="sample"></div>
-        </div>
+            <!-- //sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. 배열 : 여러개의 데이터를 저장 : 표현 방법 2</h3>
+                <p>
+                    배열은 생성자 함수안에 데이터를 저장할수있습니다
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = new Array(10, 20, "javascript"); // 생성자에 저장
 
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]); 
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample07_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample07 -->
+            <div id="sample08" class="sample">
+                <h3>08. 배열 : 여러개의 데이터를 저장 : 표현 방법 3</h3>
+                <p>
+                    배열은 생성자 함수를 생략할수있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = []; // 생성자 함수 생략
+    arr[0] = 10; //0번째 arr 변수에 10을 저장
+    arr[1] = 30; //1번째 arr 변수에 30을 저장
+    arr[2] = "javascript"; //2번째 arr 변수에 javascript을 저장
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]); 
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample08_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample08 -->
+            <div id="sample09" class="sample">
+                <h3>09. 배열 : 여러개의 데이터를 저장 : 표현 방법 4</h3>
+                <p>
+                    배열은 생성자 함수를 생략하고 괄호 안에 넣을수도있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [10, 30, "javascript"]; // 생성자 생략후 저장
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]); 
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample09_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample09 -->
+            <div id="sample10" class="sample">
+                <h3>10. 객체 : 데이터를 저장(키와 값) : 표현 방법1</h3>
+                <p>
+                    객체는 배열처럼 이용할수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = new Object;
+    obj[0] = 100;
+    obj[1] = 200;
+    obj[2] = "javascript";
+
+    document.write(obj[0]);
+    document.write(obj[1]);
+    document.write(obj[2]);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample10_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample10 -->
+            <div id="sample11" class="sample">
+                <h3>11. 객체 : 데이터를 저장(키와 값) : 표현 방법2</h3>
+                <p>
+                    객체의 데이터는 '이름 : 값'의 쌍으로 이루어 있으며 이것을 속성이라 합니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = new Object;
+    obj.a = 100; //a : 이름, 100 : 값
+    obj.b = 200; // b : 이름, 200 : 값
+    obj.c = "javascript"; //a : 이름, "javascript" : 값
+
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample11_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample11 -->
+            <div id="sample12" class="sample">
+                <h3>12. 객체 : 데이터를 저장(키와 값) : 표현 방법3</h3>
+                <p>
+                    객체는 생성자 함수를 생략하여 만들 수도 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = {}
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
+
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample12_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample12 -->
+            <div id="sample13" class="sample">
+                <h3>13. 객체 : 데이터를 저장(키와 값) : 표현 방법4</h3>
+                <p>
+                    배열은 생성자 함수를 생략하고 괄호 안에 넣을수도있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a: 100, // 프로퍼티 : 객체의 속성 값을 저장합니다
+        b: 200,
+        c: "javascript"
+    };
+
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample13_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample13 -->
+            <div id="sample14" class="sample">
+                <h3>14. 객체 : 데이터를 저장(키와 값) : 표현 방법4</h3>
+                <p>
+                    객체는 배열안에 객체를 생성할수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = [
+    {a: 100, b: 300},
+    {c: "javascript"}
+];
+
+document.write(obj[0].a);
+document.write(obj[0].b);
+document.write(obj[1].c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample14_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample14 -->
+            <div id="sample15" class="sample">
+                <h3>15. 객체 : 데이터를 저장(키와 값) : 표현 방법4</h3>
+                <p>
+                    객체는 객체안에 배열을 생성할수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: [200, 300],
+        c: { x: 400, y: 500 },
+        d: "javascript"
+    };
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample15_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample15 -->
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">
@@ -233,6 +471,7 @@
     hljs.highlightAll();
     </script> 
     <script>
+        //1. 변수 : 데이터 저장
         {
             var x = 100;
             var y = 200;
@@ -243,8 +482,8 @@
             //document.write(z);  //출력
 
             document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z; // x,y,z 출력
-        }
-        
+        }   
+        //2. 변수 : 데이터 저장 + 데이터 변경
         {
             let x = 100;             //변수 x저장소에 숫자 100 저장함
             let y = 200;             //변수 y저장소에 숫자 200 저장함
@@ -259,13 +498,13 @@
             //document.write(z);  //출력
             document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z; //x,y,z 출력
         }
-
+        //3. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
         {
             let x = 100;             //변수 x저장소에 숫자 100 저장함
             let y = 200;             //변수 y저장소에 숫자 200 저장함
             let z = "javascript";    //변수 z저장소에 문자열 "javascript" 저장함
 
-            x += 300;                  //변수 x에 값이 100에서 300을 추가해 400으로 변경
+            x += 300;                  //변수 x에 값이 100에서 300을 추가해 400으로 변경 +, -, *, / rksmd
             y += 400;                  //변수 y에 값이 200에서 400을 추가해 600으로 변경
             z += "jquery";             //변수 z에 값이 "javascript"에서 "jquery" 추가해 "javascriptjquery"으로 변경
 
@@ -274,15 +513,16 @@
             //document.write(z);  //출력
             document.querySelector(".sample03_result").innerHTML = x + "<br>" + y + "<br>" + z; //x,y,z 출력
         }
+        //4. 변수 : 지역변수 + 전역변수 + 매개변수
         {
-            let x = 100;
-            let y = 200;
-            let t = "hi";
+            let x1 = 100;
+            let y1 = 200;
+            let t1 = "hi";
             function func() {
-                let x = 300;
-                y = 400;
-                let t = "javascript";
-                document.querySelector(".sample04_result").innerHTML = "함수안<br>"+ x + "<br>" + y + "<br>" + t; //x,y,t 출력
+                let x1 = 300;
+                y1 = 400;
+                let t1 = "javascript";
+                document.querySelector(".sample04_result").innerHTML = "함수안<br>"+ x1 + "<br>" + y1 + "<br>" + t1; //x,y,t 출력
                 //document.write(x);  //출력
                 //document.write(y);  //출력
                 //document.write(t);  //출력
@@ -291,16 +531,141 @@
                 //document.write(x);  //출력
                 //document.write(y);  //출력
                 //document.write(t);  //출력
-                document.querySelector(".sample04_01_result").innerHTML = "함수밖<br>" + x + "<br>" + y + "<br>" + t; //x,y,t 출력
+                document.querySelector(".sample04_01_result").innerHTML = "<br>함수밖<br>" + x1 + "<br>" + y1 + "<br>" + t1; //x,y,t 출력
         }
+        //5. 상수 : 데이터 저장 + 데이터 변경X
         {   
             const x = 100;
-            const y = 200;
+            const y = "javascript";
             document.querySelector(".sample05_result").innerHTML =  y; // x출력 이 안되서 오류
             //document.write(y);  //출력
-            x += 200;
-            document.querySelector(".sample05_01_result").innerHTML = x; // x출력 이 안되서 오류
+            //x += 200;
+            document.querySelector(".sample05_01_result").innerHTML = "(관리자 도구에 에러메시지가 뜨고 있습니다.)"; // x출력 이 안되서 오류
         }
+        //6. 배열 : 여러개의 데이터를 저장 : 표현 방법 1
+        {
+            const arr = new Array();
+            arr[0] = 10;
+            arr[1] = 20;
+            arr[2] = "javascript";
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2]);
+            document.querySelector(".sample06_result").innerHTML =  arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+        } 
+        //7. 배열 : 여러개의 데이터를 저장 : 표현 방법 2
+        {
+            const arr = new Array(10, 20, "javascript");
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2]);
+            document.querySelector(".sample07_result").innerHTML =  arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+        }
+        //8. 배열 : 여러개의 데이터를 저장 : 표현 방법 3
+        {
+            const arr = []; // 생성자에 생략
+            arr[0] = 10; //0번째 arr 변수에 10을 저장
+            arr[1] = 30; //1번째 arr 변수에 30을 저장
+            arr[2] = "javascript"; //2번째 arr 변수에 javascript을 저장
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2]); 
+            document.querySelector(".sample08_result").innerHTML =  arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+        }
+        //9. 배열 : 여러개의 데이터를 저장 : 표현 방법 4
+        {
+            const arr = [10, 30, "javascript"]; // 생성자 생략후 저장
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2]); 
+            document.querySelector(".sample09_result").innerHTML =  arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+        }
+        //10. 객체(배열방식)
+        {
+            const obj = new Object;
+            obj[0] = 100;
+            obj[1] = 200;
+            obj[2] = "javascript";
+
+            //document.write(obj[0]);
+            //document.write(obj[1]);
+            //document.write(obj[2]);
+
+            document.querySelector(".sample10_result").innerHTML =  obj[0] + "<br>" + obj[1] + "<br>" + obj[2];
+        }
+        //11. 객체(객체방식)
+        {
+            const obj = new Object;
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            //document.write(obj.a);
+            //document.write(obj.b);
+            //document.write(obj.c);
+
+            document.querySelector(".sample11_result").innerHTML =  obj.a + "<br>" + obj.b + "<br>" + obj.c;
+        }
+        //12. 객체(객체방식)
+        {
+            const obj = {}
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            //document.write(obj.a);
+            //document.write(obj.b);
+            //document.write(obj.c);
+
+            document.querySelector(".sample12_result").innerHTML =  obj.a + "<br>" + obj.b + "<br>" + obj.c;
+        }
+        //13. 객체(객체방식)
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            };
+
+            //document.write(obj.a);
+            //document.write(obj.b);
+            //document.write(obj.c);
+
+            document.querySelector(".sample13_result").innerHTML =  obj.a + "<br>" + obj.b + "<br>" + obj.c;
+        }
+        //14. 객체 : 배열 속에 객체
+        {
+            const obj = [
+                {a: 100, b: 300},
+                {c: "javascript"}
+            ]
+
+            //document.write(obj[0].a);
+            //document.write(obj[0].b);
+            //document.write(obj[1].c);
+
+            document.querySelector(".sample14_result").innerHTML =  obj[0].a + "<br>" + obj[0].b + "<br>" + obj[1].c;
+        }
+        //15. 객체 : 객체 속에 배열
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: { x: 400, y: 500 },
+                d: "javascript"
+            };
+            //document.write(obj.a);
+            //document.write(obj.b[0]);
+            //document.write(obj.b[1]);
+            //document.write(obj.c.x);
+            //document.write(obj.c.y);
+            //document.write(obj.d);
+
+            document.querySelector(".sample15_result").innerHTML =  
+            obj.a+ "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" +
+            obj.c.x + "<br>" + obj.c.y + "<br>" + obj.d;
+        }
+
     </script>
 </body>
 </html>

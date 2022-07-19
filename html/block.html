@@ -162,15 +162,45 @@
                 <li><a href="block.html">블록/인라인 요소</a></li>
         </nav>
         <article class="article">
-            <h2>W3C validator</h2>
-            <p>
-                W3C validator는 HTML 유효성 검사로 마크업에 대한 문법적 오류나 경고를 확인할수 있습니다.<br>
-                HTML 문서 작성에 가장 기본이 되는 사항이므로 마크업 중간이나 CSS에 들어가기 전에 꼭 확인해야합니다.
-            </p>
-            <p>
-                작성한 HTML 문서의'문법 유효성 검사'는 <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a> 에서 수행할 수 있습니다.
-            </p>
-            </article>
+            <h2>블록/인라인 요소</h2>
+            <p></p>
+
+            
+            <h3>2. 요소는 제대로 중첩되어야 합니다.</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>요소 유형</th>
+                        <th>특징</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">블록 레벨 요소</td>
+                        <td>1. 블록 레벨 요소는 줄 바꿈이 일어납니다.<br>
+                            2. 블록 레벨 요소는 텍스트(문자)와 인라인 요소를 지식 요소로 포함할 수 있습니다.<br>
+                            3. 블록 레벨 요소 중에는 블록 레벨 요소를 자식 요소로 포함 할 수 있는 요소와 포함할 수 없는
+                            요소가 있습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">인라인 요소</td>
+                        <td>1. 인라인 요소는 줄 바꿈이 일어나지 않습니다.<br>
+                            2. 인라인 요소는 텍스트(문자)와 인라인 요소를 자식 요소로 포함할 수 있습니다.
+                            3. 인라인 요소는 블록 레벨 요소를 자식 요소로 포함할 수 없습니다. 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="box">
+               <p style="background-color: red; display: inline;">이것은 인라인요소 입니다</p>
+               <p style="background-color: red; display: inline;">이것은 인라인요소 입니다</p>
+               <p style="background-color: red; display: inline;">이것은 인라인요소 입니다</p>
+               <p style="background-color: yellow; display: block;">이것은 블록 입니다</p>
+               <p style="background-color: red; display: inline;">이것은 인라인요소 입니다</p>
+               <p style="background-color: yellow; display: block;">이것은 블록 입니다</p>
+            </div>
+        </article>
     </section>
 </body>
 </html>

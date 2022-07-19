@@ -20,7 +20,6 @@
             color: #000;
         }
 
-
         /* 헤더 */
         #header {
             padding: 2vw;
@@ -29,6 +28,9 @@
         #header h1{
             font-size: 4vw;
             margin-bottom: 2vw;
+        }
+        #header h1 a {
+            color: #3e68ff;
         }
         #header nav {
 
@@ -143,7 +145,7 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="index.html">HTML</a></h1>
+        <h1><a href="index.html">CSS</a></h1>
         <nav>
             <ul>
                 <li><a href="easy.html">기초</a></li>
@@ -156,21 +158,47 @@
         <nav class="menu">
             <ul>
                 <li><a href="easy.html">기본 구성</a></li>
-                <li><a href="markup.html">기본 규칙</a></li>
-                <li><a href="w3c.html">W3C validator</a></li>
-                <li><a href="semantic.html">시멘틱 마크업</a></li>
-                <li><a href="block.html">블록/인라인 요소</a></li>
+                <li><a href="#">#</a></li>
+                <li><a href="#">#</a></li>
+                <li><a href="#">#</a></li>
+                <li><a href="#">#</a></li>
         </nav>
         <article class="article">
-            <h2>W3C validator</h2>
-            <p>
-                W3C validator는 HTML 유효성 검사로 마크업에 대한 문법적 오류나 경고를 확인할수 있습니다.<br>
-                HTML 문서 작성에 가장 기본이 되는 사항이므로 마크업 중간이나 CSS에 들어가기 전에 꼭 확인해야합니다.
+            <h2>CSS 단위!</h2>
+            <p>글자 크기를 명시하지 않을 경우 16px 가 기본 값입니다.</p>
+            <h3>px</h3>
+            <p>해상도에 따라 상대적으로 달라지는 기본 단위입니다.</p>
+            <p class="box" style="font-size: 12px;">
+                font-size: 12px;
             </p>
-            <p>
-                작성한 HTML 문서의'문법 유효성 검사'는 <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a> 에서 수행할 수 있습니다.
+            <h3>px</h3>
+            <p>부모 요소의 글자 크기를 100% 기준으로 계산한 % 단위입니다.</p>
+            <p class="box" style="font-size: 120%;">
+                font-size: 120%;
             </p>
-            </article>
+            <h3>em</h3>
+            <p>부모 요소의 글자 100% 기준으로 계산한 크기를 100 분의 1단위입니다.</p>
+            <p class="box" style="font-size: 1.5em;">
+                font-size: 1.5em;
+            </p>
+            <h3>rem</h3>
+            <p>최상의 요소의 크기를 100% 기준으로 100분의 1단위입니다. <br>
+               즉 root, html 요소를 뜻하므로, html에서 지정한 글자 크기가 1rem 이 됨니다</p>
+            <p class="box" style="font-size: 0.8rem;">
+                font-size: 0.8rem;
+            </p>
+            <h3>vw</h3>
+            <p>vw는 뷰포트 너비값의 100분의 1단위입니다.</p>
+            <p class="box" style="font-size: 3vw;">
+                font-size: 3vw;
+                
+            </p>
+            <h3>vh</h3>
+            <p>vh는 뷰포트 높이값의 100분의 1단위입니다.</p>
+            <p class="box" style="font-size: 2vh;">
+                font-size: 2vh;
+            </p>
+        </article>
     </section>
 </body>
 </html>
