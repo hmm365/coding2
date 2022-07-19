@@ -104,7 +104,7 @@ body {
 }
 
 .main_sample .result {
-
+    margin-bottom: 80px;
 }
 
 @media (max-width: 800px) {

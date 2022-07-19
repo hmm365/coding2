@@ -66,10 +66,9 @@
                 <div class="script">
 <pre><code class="language-js">{
         var x = 100;             //변수 x저장소에 숫자 100 저장함
-        var y = 200;             //변수 x저장소에 숫자 200 저장함
-        var z = "javascript";    //변수 x저장소에 문자열 "javascript" 저장함
+        var y = 200;             //변수 y저장소에 숫자 200 저장함
+        var z = "javascript";    //변수 z저장소에 문자열 "javascript" 저장함
                  
-        document.write("01. 변수 ");
         document.write(x);  //출력
         document.write(y);  //출력
         document.write(z);  //출력
@@ -84,11 +83,132 @@
                         </div>
                     </details>
                 </div>
+            </div> 
+            <!-- //sample01 -->
+            <div id="sample02" class="sample">
+                <h3>02. 변수 : 데이터 저장 + 데이터 변경</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소이지만 변경도 가능합니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+        var x = 100;             //변수 x저장소에 숫자 100 저장함
+        var y = 200;             //변수 y저장소에 숫자 200 저장함
+        var z = "javascript";    //변수 z저장소에 문자열 "javascript" 저장함
+                 
+        x = 300;                  //변수 x에 값이 100에서 300으로 변경
+        y = 400;                  //변수 y에 값이 200에서 400으로 변경
+        z = "jquery";             //변수 z에 값이 "javascript"에서 "jquery"으로 변경
+    
+        document.write(x);  //출력
+        document.write(y);  //출력
+        document.write(z);  //출력
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample02_result">
+
+                        </div>
+                    </details>
+                </div>
             </div>
-            <div id="sample02" class="sample"></div>
-            <div id="sample03" class="sample"></div>
-            <div id="sample04" class="sample"></div>
-            <div id="sample05" class="sample"></div>
+            <!-- //sample02 -->
+            <div id="sample03" class="sample">
+                <h3>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소이지만 변경 및 추가도 가능합니다..
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+        let x = 100;             //변수 x저장소에 숫자 100 저장함
+        let y = 200;             //변수 y저장소에 숫자 200 저장함
+        let z = "javascript";    //변수 z저장소에 문자열 "javascript" 저장함
+
+        x += 300;                  //변수 x에 값이 100에서 300을 추가해 400으로 변경
+        y += 400;                  //변수 y에 값이 200에서 400을 추가해 600으로 변경
+        z += "jquery";             //변수 z에 값이 "javascript"에서 "jquery" 추가해 "javascriptjquery"으로 변경
+    
+        document.write(x);  //출력
+        document.write(y);  //출력
+        document.write(z);  //출력
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample03_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //smapmle03 -->
+            <div id="sample04" class="sample">
+                <h3>04. 변수 : 지역변수 + 전역변수 + 매개변수</h3>
+                <p>
+                    변수는 괄호안에서만 동작하는 지역변수 모든곳에서 동작하는 전역변수가 있습니다..
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    let x = 100; // x 에 100저장
+    let y = 200; // y 에 200저장
+    let t = "hi"; // t 에 문자열 "hi" 저장
+    function func() { // 함수 생성
+        let x = 300; // 지역변수 x 에 300저장
+        y = 400; // 전역변수 y 에 400저장
+        let t = "javascript"; // 지역변수 t 에 문자열 "javascript" 저장
+
+        document.write("함수안"); 
+        document.write(x);  //출력
+        document.write(y);  //출력
+        document.write(z);  //출력
+    }
+        func(); // 함수 호출
+        document.write("함수밖");
+        document.write(x);  //출력
+        document.write(y);  //출력
+        document.write(z);  //출력
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample04_result"></div>
+                        <div class="sample04_01_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+            <div id="sample05" class="sample">
+                <h3>05. 상수 : 데이터 저장 + 데이터 변경X</h3>
+                <p>
+                    상수는 데이터를 저장할수 있지만 데이터를 변경할 수 없습니다..
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const x = 100; // 상수 x 100 저장
+    const y = 200; // 상수 y 200 저장
+
+    document.write(y);  //출력
+    x += 200;
+    document.write(x); // 출력
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample05_result"></div>
+                        <div class="sample05_01_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
+            </div>
             <div id="sample06" class="sample"></div>
             <div id="sample07" class="sample"></div>
             <div id="sample08" class="sample"></div>
@@ -102,7 +222,7 @@
             <div id="sample16" class="sample"></div>
             <div id="sample17" class="sample"></div>
         </div>
-        <div id="main_desc"></div>
+
     </main>
     <!-- //main -->
     <footer id="footer">
@@ -118,7 +238,68 @@
             var y = 200;
             var z = "javascript";
 
-            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            //document.write(x);  //출력
+            //document.write(y);  //출력
+            //document.write(z);  //출력
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z; // x,y,z 출력
+        }
+        
+        {
+            let x = 100;             //변수 x저장소에 숫자 100 저장함
+            let y = 200;             //변수 y저장소에 숫자 200 저장함
+            let z = "javascript";    //변수 z저장소에 문자열 "javascript" 저장함
+
+            x = 300;                  //변수 x에 값이 100에서 300으로 변경
+            y = 400;                  //변수 y에 값이 200에서 400으로 변경
+            z = "jquery";             //변수 z에 값이 "javascript"에서 "jquery"으로 변경
+            
+            //document.write(x);  //출력
+            //document.write(y);  //출력
+            //document.write(z);  //출력
+            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z; //x,y,z 출력
+        }
+
+        {
+            let x = 100;             //변수 x저장소에 숫자 100 저장함
+            let y = 200;             //변수 y저장소에 숫자 200 저장함
+            let z = "javascript";    //변수 z저장소에 문자열 "javascript" 저장함
+
+            x += 300;                  //변수 x에 값이 100에서 300을 추가해 400으로 변경
+            y += 400;                  //변수 y에 값이 200에서 400을 추가해 600으로 변경
+            z += "jquery";             //변수 z에 값이 "javascript"에서 "jquery" 추가해 "javascriptjquery"으로 변경
+
+            //document.write(x);  //출력
+            //document.write(y);  //출력
+            //document.write(z);  //출력
+            document.querySelector(".sample03_result").innerHTML = x + "<br>" + y + "<br>" + z; //x,y,z 출력
+        }
+        {
+            let x = 100;
+            let y = 200;
+            let t = "hi";
+            function func() {
+                let x = 300;
+                y = 400;
+                let t = "javascript";
+                document.querySelector(".sample04_result").innerHTML = "함수안<br>"+ x + "<br>" + y + "<br>" + t; //x,y,t 출력
+                //document.write(x);  //출력
+                //document.write(y);  //출력
+                //document.write(t);  //출력
+            }
+                func();
+                //document.write(x);  //출력
+                //document.write(y);  //출력
+                //document.write(t);  //출력
+                document.querySelector(".sample04_01_result").innerHTML = "함수밖<br>" + x + "<br>" + y + "<br>" + t; //x,y,t 출력
+        }
+        {   
+            const x = 100;
+            const y = 200;
+            document.querySelector(".sample05_result").innerHTML =  y; // x출력 이 안되서 오류
+            //document.write(y);  //출력
+            x += 200;
+            document.querySelector(".sample05_01_result").innerHTML = x; // x출력 이 안되서 오류
         }
     </script>
 </body>
