@@ -11,25 +11,25 @@
 </head>
 <body>
     <header id="header">
-        <h1>Javascript</h1>
+        <h1><a href="index.html">Javascript</a></h1>
         <nav class="header_nav">
             <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
             <ul>
-                <li><a href="#">문자열 객체</a></li>
-                <li><a href="#">배열 객체</a></li>
-                <li><a href="#">수학 객체</a></li>
-                <li><a href="#">브라우저 객체</a></li>
-                <li><a href="#">요소 객체</a></li>
-                <li><a href="#">이벤트 객체</a></li>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">브라우저 객체</a></li>
+                <li><a href="javascript09.html">요소 객체</a></li>
+                <li><a href="javascript10.html">이벤트 객체</a></li>
             </ul>
             <ul class="study">
-                <li><a href="easy.html">기본 규칙</a></li>
-                <li><a href="communication.html">연산자</a></li>
+                <li><a href="study/basic.html">기본 규칙</a></li>
+                <li><a href="study/operator.html">연산자</a></li>
             </ul>
         </nav>
     </header>
@@ -412,7 +412,7 @@
             </div>
             <!-- //sample13 -->
             <div id="sample14" class="sample">
-                <h3>14. 객체 : 데이터를 저장(키와 값) : 표현 방법4</h3>
+                <h3>14. 객체 : 데이터를 저장(키와 값) : 표현 방법5</h3>
                 <p>
                     객체는 배열안에 객체를 생성할수 있습니다.
                 </p>
@@ -438,7 +438,7 @@ document.write(obj[1].c);
             </div>
             <!-- //sample14 -->
             <div id="sample15" class="sample">
-                <h3>15. 객체 : 데이터를 저장(키와 값) : 표현 방법4</h3>
+                <h3>15. 객체 : 데이터를 저장(키와 값) : 표현 방법6</h3>
                 <p>
                     객체는 객체안에 배열을 생성할수 있습니다.
                 </p>
@@ -450,6 +450,7 @@ document.write(obj[1].c);
         c: { x: 400, y: 500 },
         d: "javascript"
     };
+}
 </code></pre>
                 </div>
                 <div class="result">
@@ -460,6 +461,78 @@ document.write(obj[1].c);
                 </div>
             </div>
             <!-- //sample15 -->
+            <div id="sample16" class="sample">
+                <h3>16. 객체 : 데이터를 저장(키와 값) : 표현 방법7</h3>
+                <p>
+                    객체는 객체안에 변수의 값을 넣을수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const a = 100;
+    const b = 200;
+    const c = "javascript"
+    const obj = {
+        a, 
+        b, 
+        c
+    };
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample16_result"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample16 -->
+            <div id="sample17" class="sample">
+                <h3>17. 객체 : 데이터를 저장(키와 값) : 표현 방법8</h3>
+                <p>
+                    객체는 객체안에 변수의 값을 넣을수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: [200, 300],
+        c: { x: 400, y: 500 },
+        d: "javascript",
+        e: function(){
+            document.write("자바스크립트가 실행되었습니다.")
+        },
+        f: function(){
+            document.write(obj.d + " 실행되었습니다.")
+        },
+        g: function(){
+            document.write(this.d + " 실행되었습니다.")
+        }
+    };
+    document.write(obj.a);
+    document.write(obj.b[0]);
+    document.write(obj.b[1]);
+    document.write(obj.c.x);
+    document.write(obj.c.y);
+    document.write(obj.d);
+    obj.e();
+    obj.f();
+    obj.g();
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample17_result"></div>
+                        <div>자바스크립트가 실행되었습니다.<br>javascript가 실행되었습니다.<br>javascript가 실행되었습니다.</div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample17 -->
         </div>
     </main>
     <!-- //main -->
@@ -664,6 +737,54 @@ document.write(obj[1].c);
             document.querySelector(".sample15_result").innerHTML =  
             obj.a+ "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" +
             obj.c.x + "<br>" + obj.c.y + "<br>" + obj.d;
+        }
+        //16. 객체 : 객체 속에 변수
+        {
+            const a = 100;
+            const b = 200;
+            const c = "javascript"
+            const obj = {
+                a, 
+                b, 
+                c
+            };
+            //document.write(obj.a);
+            //document.write(obj.b);
+            //document.write(obj.c);
+
+            document.querySelector(".sample16_result").innerHTML =  
+            obj.a+ "<br>" + obj.b + "<br>" + obj.c
+        }
+        //17. 객체 : 객체 속에 함수
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: { x: 400, y: 500 },
+                d: "javascript",
+                e: function(){
+                    document.write("자바스크립트가 실행되었습니다.")
+                },
+                f: function(){
+                    document.write(obj.d + " 실행되었습니다.")
+                },
+                g: function(){
+                    document.write(this.d + " 실행되었습니다.")
+                }
+            };
+            //document.write(obj.a);
+            //document.write(obj.b[0]);
+            //document.write(obj.b[1]);
+            //document.write(obj.c.x);
+            //document.write(obj.c.y);
+            //document.write(obj.d);
+            //obj.e();
+            //obj.f();
+            //obj.g();
+
+            document.querySelector(".sample17_result").innerHTML =  
+            obj.a+ "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" +
+            obj.c.x + "<br>" + obj.c.y + "<br>" + obj.d; + "<br>";
         }
     </script>
 </body>

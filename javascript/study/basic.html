@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기본구성</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+    
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">기본 규칙</h2>
+            <p class="t_desc">
+                자바스크립트를 다루기 위해서는 기초적인 특징과 기본 문법이 있습니다.
+                가장 기본이기 때문에 이 부분을 숙지하고 자바스크립트를 <i>공부</i>하시는걸 추천합니다.
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit2">자바스크립트란?</h3>
+            <p class="t_desc2">
+                JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있도록 하는 스크립팅언어 또 는 <i>프로그래밍 언어</i> 입니다.
+                HTML은 정적인 레이아웃을 표현한다면, 자바스크립트는 동적인 기능을 표현합니다.
+            </p>
+            <p class="t_desc">
+                자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였으며 Netscape Navigsator2.0에 구현되었습니다. 1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터 ESMAScript를 따르는 표준화 작업을 통해 현재는 모든 브라우저에서 지원됩니다.
+            </p>
+            <h3 class="t_tit2">자바스크립트 기본 규칙</h3>
+            <h4 class="t_tit3">01. 세미콜론(;)</h4>
+            <p class="t_desc">
+                하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다.
+                세미콜론을(;)을 붙여 주지 않아도 상관은 없습니다.
+            </p>
+            <div class="t_box">
+                var num = 5<i>;</i><br>
+                document.write(num)<i>;</i>
+            </div>
+            <h4 class="t_tit3">02. 대소문자</h4>
+            <p class="t_desc">
+                자바스크립트 명령어는 <i>대소문자를</i> 구별합니다.<br>
+                console와 Console은 각각 문자열로 처리됩니다.
+            </p>
+            <div class="t_box">
+                var <i>Num</i> = 5;<br>
+                document.write(<i>num</i>);
+            </div>
+            <h4 class="t_tit3">03. 들여쓰기</h4>
+            <p class="t_desc">
+                자바스크립트는 가독성을 위하여 <i>들여쓰기</i>를 사용합니다.
+            </p>
+            <h4 class="t_tit3">04. 주석처리</h4>
+            <p class="t_desc">
+                자바스크립트 주석은 일반적으로 특정 코드에 대한 설명을 입력하거나
+                특정한 부분의 코드가 실행되지 않도록 사용합니다.<br>
+                주석표식은 프로그램에 영향을 미치지 않습니다.
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit2">출력하는 방법</h3>
+            <p class="t_desc">자바스크립트에서는 출력할 수 있는 방법이 여러가지 있습니다.</p>
+            <table class="t_table">
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>분류</th>
+                        <th>메서드</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">입력</td>
+                        <td>prompt</td>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="3">출력</td>
+                        <td>document.write()</td>
+                    </tr>
+                    <tr>
+                        <td>alert()</td>
+                    </tr>
+                        <td>console.log()</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h3 class="t_tit2">자바스크립트 사용 방법</h3>
+            <p class="t_desc">
+                자바스크립트의 사용 방법은 <br>
+                1. 외부파일<br>
+                2. 스크립트 태그<br>
+                3. 태그에 직접 기술하는 방법 등이 있습니다.<br>
+            </p>
+            <div class="t_code">
+<pre><code>    &lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Javasript&lt;/title&gt;
+        &lt;!-- 1. 외부 파일로 로드하는 방법 --&gt;
+        &lt;script type="text/Javasript" src="js/script.js"&gt;&lt;/script&gt;
+        &lt;!-- 2. script 태그 사이에 기술하는 방법 --&gt;
+        &lt;script&gt;
+            document.write("Javasript");
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 3. 태그에 직접 기술하는 방법 --&gt;
+        &lt;a href="#" onclick="alert('Javasript')"&gt;&lt;/a&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+
+    </script>
+</body>
+</html>
