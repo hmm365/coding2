@@ -11,3 +11,4 @@ https://hmm365.github.io/coding2/javascript/index.html
 
 ### HTML 메인 페이지
 https://hmm365.github.io/coding2/html/index.html
+https://hmm365.github.io/coding2/html/alphabet.html
