@@ -168,7 +168,7 @@ body {
     background-color: #f9f9f9;
 }
 .document .t_box {
-    padding: 10px 20px;
+    padding: 20px !important;
     background-color: #f9f9f9;
     margin-bottom: 10px;
     color: #666;

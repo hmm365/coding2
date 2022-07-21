@@ -1,131 +1,201 @@
+/* 웹폰트 */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/tmon/Tmon.css');
 /* 리셋 */
+/* 여백 초기화 */
 * {
+    font-family: 'NexonLv1Gothic';
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'GmarketSans';
-}
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-
-/* 헤더 */
-#header {
-    padding: 2vw;
-    border-bottom: 1px dashed #dedede;
-}
-#header h1{
-    font-size: 4vw;
-    margin-bottom: 2vw;
-}
-#header nav {
-
-}
-#header nav ul {
-    
-}
-#header nav ul li{
-    list-style: none;
-    display: inline;
-}
-#header nav ul li a{
-    color: #000;
-    text-decoration: none;
-    border: 1px solid #000;
-    padding: 0.6vw 1vw;
-    display: inline-block;
-}
-#header nav ul li a:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-/* contents 영역 */
-#contents {
-    padding: 2vw;
-}
-#contents .menu {
-    border-bottom: 1px dashed #dedede;
-    padding-bottom: 2vw;
-}
-#contents .menu ul {
-    
-}
-#contents .menu ul li {
-    list-style: none;
-    display: inline;
-}
-#contents .menu ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #000;
-    padding: 0.6vw 1vw; 
-    background-color: #000;
-    word-break: keep-all;
-    margin-bottom: 0.7vw;
-    margin-top: 0.7vw;
-}
-#contents .menu ul li a:hover {
-    background-color: #fff;
-    color: #000;
-}
-.article {
-    padding: 2vw 0;
+    font-size: 16px;
     line-height: 1.6;
 }
-.article p {
-    margin-bottom: 10px;
+
+/* 링크 초기화 */
+a {
+    text-decoration: none;
+    color: #222;
 }
-.article h2 {
+
+/* 목록 초기화 */
+li {
+    list-style: none;
+}
+
+/* 제목 초기화 */
+h1, h2, h3, h4, h5 {
     font-weight: normal;
-    margin-bottom: 10px;
 }
-.article h3 {
-    font-weight: normal;
-    margin-bottom: 10px;
+
+/* 기울기 초기화 */
+em,
+i {
+    font-style: normal;
 }
-.article .table {
+/* 레이아웃 */
+body {
+    background-color: #f5f5f5;
+}
+/* 테이블 초기화 */
+table {
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
-    margin-bottom: 10px;
 }
-.article .table .center {
+
+/* 전체영역 */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    padding: 14px 20px 5px 20px;
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main {
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#footer {
+    border-bottom: 1px dashed #dcdcdc;
+    padding: 40px 0;
     text-align: center;
 }
-.article .table tr th{
-    border: 1px solid #dedede;
-    padding: 10px;
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/* header 영역 */
+
+#header {
+    padding: 14px 20px 5px 20px;
+}
+
+#header h1 a{
+   font-size: 36px; 
+   font-weight: 500;
+}
+
+#header span {
+    padding-top: 20px;
+    color: #666;
+}
+
+/* main 영역 */
+.main_header {
+}
+
+.main_header h2{
+    font-size: 80px;
+    text-align: center;
+    padding: 10% 10% 5% 10%;
+    font-family: "Tmon";
+}
+
+.main_header h2 em{
+    font-size: 80px;
+    color: #00DB72;
+    font-family: "Tmon";
+}
+
+.main_menu {
+    margin-bottom: 20px;
+}
+.main_menu ul li {
+    display: inline;
+}
+.main_menu ul li a {
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    background-color: #00DB72;
+    color: #fff;
+}
+.main_menu li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+.main_refer {
+    border: 1px solid #000;
+    padding: 30px;
+    background-color: #fff;
+    
+}
+.main_refer .table table {
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    text-align: center;
+}
+.main_refer .table table tr th {
     font-weight: normal;
     background-color: #f5f5f5;
 }
-.article .table tr td {
-    border: 1px solid #dedede;
+
+.main_refer .table table tr th,
+.main_refer .table table tr td {
+    border: 1px solid #cdcdcd;
     padding: 10px;
 }
-.article .box {
-    background-color: #f5f5f5;
-    padding: 15px;
+.main_refer .table table tr td span{
+    font-size: 16px;
+}
+.main_refer .table table tr td:nth-child(3){
+    text-align: left;
+}
+.main_refer .table table tr:hover {
+    line-height: 1.6;
+    background-color: #00db712c;
 }
 
+.main_refer .table table tr a:hover {
+    text-decoration: underline;
+}
 
-
-/* 모바일 */
-@media (max-width: 800px) {
-    #header h1{
-        padding: 16px;
+@media(max-width: 900px) {
+    #header {
+        display: none;
+    }
+    .main_header h2 {
+        padding-top: 40px;
         font-size: 40px;
     }
-    #header nav ul li a {
-        padding: 5px 10px;
-        font-size: 18px;
+    .main_header h2 em{
+        font-size: 40px;
     }
-    #contents .menu ul li a{
-        padding: 5px 10px;
-        font-size: 16px;
+    .main_refer {
+        border: 0;
+        padding: 0;
     }
-    
+    .main_refer .table {
+        overflow-x: auto;
+    }
+    .main_refer .table table {
+        min-width: 800px;
+    }
+    .main_refer .table table tr th,
+    .main_refer .table table tr td {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 460px) {
+    .main_header h2 {
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    .main_header h2 em{
+        font-size: 30px;
+    }
 }

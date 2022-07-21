@@ -1,17 +1,39 @@
-&lt!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Javasript&lt;/title&gt;
-    &lt;!-- 1. 외부 파일로 로드하는 방법 --&gt;
-    &lt;script type="text/Javasript" src="js/script.js"&gt;&lt;/script&gt;
-    &lt;!-- 2. script 태그 사이에 기술하는 방법 --&gt;
-    &lt;script&gt;
-        document.write("Javasript");
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- 3. 태그에 직접 기술하는 방법 --&gt;
-    &lt;a href="#" onclick="alert('Javasript')"&gt;&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid #000;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        tr,td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        { 
+            let row = 9;
+            let col = 9;
+            let table = "<table>";
+                for(let i=1; i<=row; i++){
+                    table += "<tr>";
+                    
+                    for(let j=1; j<=col; j++){
+                        table += "<td>" + i + " * " + j + " = " + i*j + "</td>";
+                    }
+                    table += "</tr>";
+                }
+                table += "</table>";
+                document.write(table);
+            
+        }
+    </script>
+</body>
+</html>

@@ -30,6 +30,7 @@
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
                 <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="study/for.html">for문</a></li>
             </ul>
         </nav>
     </header>
@@ -270,8 +271,119 @@
                     </details>
                 </div>
             </div> 
-            <!-- //sample06 -->
-            
+            <!-- //sample07 -->
+            <div id="sample08" class="sample">
+                <h3>08. 배열 : 데이터 불러오기 : for of</h3>
+                <p>
+                    for of 문은 배열의 값을 출력합니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+    for(let i of arr){
+        document.write(i + "<br>"); //value 출력
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample08_result">
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample08 -->
+            <div id="sample09" class="sample">
+                <h3>09. 배열 : 데이터 불러오기 : for in</h3>
+                <p>
+                    for in 문은 배열의 인덱스을 출력합니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+    for(let i in arr){
+        document.write(i + "<br>"); //인덱스 출력
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample09_result">
+                            0<br>
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample09 -->
+            <div id="sample10" class="sample">
+                <h3>10. 배열 데이터 불러오기 : map();</h3>
+                <p>
+                    map() 은 forEach() 와 유사하지만 forEach()는 Arry 요소를 제공된 함수로 한 번 실행하지만,<br>
+                    map() 은 Arry 요소가 제공된 함수로 호출될때 새로운 array를 생성합니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+
+    arr.forEach(function(el){ //저장할때 값을 저장
+        document.write(el);
+    });
+    
+    arr.map(function(el){ //저장할때 배열을 저장
+        document.write(el);
+    });
+
+    const ex = ['a','b','c','d','e','f','g','h','k','l','m'];
+    //map() 3가지 인자(parameter) 값
+    ex.map(function(element, index, array){ 
+        document.write(array + "의 " + index +"번째 요소 : " + element);
+    });
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample10_result">
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 0번째 요소 : a<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 1번째 요소 : b<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 2번째 요소 : c<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 3번째 요소 : d<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 4번째 요소 : e<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 5번째 요소 : f<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 6번째 요소 : g<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 7번째 요소 : h<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 8번째 요소 : k<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 9번째 요소 : l<br>
+                            a,b,c,d,e,f,g,h,k,l,m의 10번째 요소 : m<br>
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample10 -->
         </div>
     </main>
     <!-- //main -->
@@ -357,10 +469,44 @@
             });
 
             num.forEach(function(elment){
-                //document.write(elment);
+                //document.write(elment + "<br>");
+            });
+        }
+        //08. 배열 : 데이터 불러오기 : for of
+        {
+            const arr = [100, 200, 300, 400, 500];
+            for(let i of arr){
+                //document.write(i + "<br>"); //value 출력
+            }
+        }
+        //09. 배열 : 데이터 불러오기 : for in
+        {
+            const arr = [100, 200, 300, 400, 500];
+            for(let i in arr){
+                //document.write(arr[i] + "<br>"); //인덱스 출력
+            }
+        }
+        //10. 배열 데이터 불러오기 : map();
+        {
+            const arr = [100, 200, 300, 400, 500];
+
+            arr.forEach(function(el){ //저장할때 값을 저장
+                //document.write(el+"<br>");
+                //console.log(el);
+            });
+            
+            arr.map(function(el){ //저장할때 배열을 저장
+                //document.write(el+"<br>");
+                //console.log(el);
             });
 
+            const ex = ['a','b','c','d','e','f','g','h','k','l','m'];
+            //forEach() 3가지 인자(parameter) 값
+            ex.map(function(element, index, array){ 
+                //document.write(array + "의 " + index +"번째 요소 : " + element + "<br>");
+            });
         }
     </script>
 </body>
 </html>
+

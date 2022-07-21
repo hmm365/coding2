@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 for문</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">for문</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">for문</h2>
+            <p class="t_desc">
+                for 문은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 블럭문)으로 이루어져 있습니다.
+            </p>
+            <p class="t_box">
+                for (초기 값; 조건식; 증가감식;){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                }
+             </p>
+
+            <hr>
+
+            <h3 class="t_tit2">1부터 100까지 출력하기</h3>
+            <div class="t_code">
+<pre><code>//1부터 100까지 출력하기
+for (let i = 1; i &lt;= 100; i++){ // i = i + 1 와 같다.
+    document.write(i);
+}
+// 결과는 : 1 2 3 4 5﹒﹒﹒﹒﹒100
+
+</code></pre>
+            </div>
+            <h3 class="t_tit2">1부터 100까지 짝수 출력하기</h3>
+            <p class="t_desc">짝수로 출력할 때는 증가값을 2로 해주면 됩니다.</p>
+            <div class="t_code">
+<pre><code>//1부터 100까지 짝수 출력하기
+for (let i = 2; i &lt;= 100; i+=2){ // i = i + 2 와 같다.
+    document.write(i);
+}
+// 결과는 : 2 4 6 8﹒﹒﹒﹒﹒100
+
+</code></pre>
+            </div>
+            <h3 class="t_tit2">1부터 100까지 출력하기</h3>
+            <div class="t_code">
+<pre><code>//1부터 100까지 출력하기
+for (let i = 1; i &lt;= 100; i++){ // i = i + 1 와 같다.
+    document.write(i);
+}
+// 결과는 : 1 2 3 4 5﹒﹒﹒﹒﹒100
+
+</code></pre>
+            </div>
+            <h3 class="t_tit2">for문을 이용해서 테이블 출력하기</h3>
+            <p class="t_desc">중첩 for문을 이용해서 테이블을 만들 수 있습니다.</p>
+            <div class="t_code">
+<pre><code>//중첩 for문을 이용해서 테이블 만들기
+let table = "&lt;table&gt;";
+// table += &lt;tr&gt;;
+// table += &lt;td&gt;;
+// table += &lt;/td&gt;;
+// table += &lt;/tr&gt;;
+// table += &lt;/table&gt;;
+for(let i=1; i&lt;=9; i++){
+    table += "&lt;tr&gt;";
+                
+    for(let j=1; j&lt;=9; j++){
+        table += "&lt;td&gt;" + i + " * " + j + " = " + i*j + "&lt;/td&gt;";
+    }
+    table += "&lt;/tr&gt;";
+}
+    table += "&lt;/table&gt;";
+    document.write(table);
+</code></pre>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result01"></div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+        {
+            let row = 9;
+            let col = 9;
+            let table = "<table>";
+                for(let i=1; i<=row; i++){
+                    table += "<tr>";
+                    
+                    for(let j=1; j<=col; j++){
+                        table += "<td>" + i + " * " + j + " = " + i*j + "</td>";
+                    }
+                    table += "</tr>";
+                }
+                table += "</table>";
+                document.querySelector(".result01").innerHTML = table;
+        }
+    </script>
+</body>
+</html>
