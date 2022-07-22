@@ -7,6 +7,7 @@
     <title>레이아웃</title>
     <style>
         * {
+            box-sizing: border-box;
             padding: 0;
             margin: 0;
         }
@@ -19,53 +20,36 @@
         #header {
             width: 100%;
             height: 100px;
-            background-color: #B3E5FC;
+            background-color: #C8E6C9;
         }
         #nav {
             width: 100%;
             height: 100px;
-            background-color: #81D4FA;
+            background-color: #A5D6A7;
         }
         #aside {
-            width: 30%;
+            width: 25%;
             height: 780px;
-            background-color: #4FC3F7;
+            background-color: #81C784;
         }
-        #container {
-            width: 70%;
+        #section {
+            width: 50%;
+            height: 780px;
+            background-color: #66BB6A;
         }
-        #section_a {
-            width: 100%;
-            height: 260px;
-            background-color: #29B6F6;
-        }
-        #section_b {
-            width: 100%;
-            height: 260px;
-            background-color: #03A9F4;
-        }
-        #section_c {
-            width: 100%;
-            height: 260px;
-            background-color: #039BE5;
+        #article {
+            width: 25%;
+            height: 780px;
+            background-color: #4CAF50;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #0288D1;
+            background-color: #43A047;
         }
         @media (max-width: 1220px){
             #wrap {
                 width: 96%;
-            }
-
-            #section_b {
-                width: 50%;
-
-            }
-            #section_c {
-                width: 50%;
-
             }
         }   
         @media (max-width: 768px){
@@ -75,33 +59,23 @@
             #aside {
                 width: 30%;
             }
-            #section_a {
-                height: 390px;
+            #section {
+                width: 70%;
             }
-            #section_b {
+            #article {
                 width: 100%;
-                height: 390PX;
+                height: 150px;
             }
-            #section_c {
-                display: none;
-            } 
         }
         @media (max-width: 480px){
             #aside {
                 width: 100%;
                 height: 200px;
             }
-            #container {
-                width: 100%;
-            }
-            #section_a {
+            #section {
                 width: 100%;
                 height: 430px;
-            }
-            #section_b {
-                width: 100%;
-                height: 150px;
-            } 
+            }           
         }
     </style>
 </head>
@@ -110,11 +84,8 @@
         <div id="header"></div>
         <div id="nav"></div>
         <div id="aside"></div>
-        <div id="container">
-            <div id="section_a"></div>
-            <div id="section_b"></div>
-            <div id="section_c"></div>
-        </div>
+        <div id="section"></div>
+        <div id="article"></div>
         <div id="footer"></div>
     </div>
 </body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+</head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #FFF3E0;
+        }
+        #wrap{
+            display: grid;
+            width: 1200px;
+            margin: 0 auto;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "aside section"
+                "footer footer";
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 100px 780px 780px 100px 100px; 
+        }
+        #header{
+            grid-area: header;
+            background-color: #FFE0B2;
+        }
+        #nav{
+            grid-area: nav;
+            background-color: #FFCC80;
+        }
+        #aside {
+            grid-area: aside;
+            background-color: #FFB74D;
+        }
+        #section{
+            grid-area: section;
+            background-color: #FFA726;
+        }
+        #footer{
+            grid-area: footer;
+            background-color: #FF9800;
+            clear: both;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px){
+            #wrap {
+                grid-template: 
+                    "header"
+                    "nav"
+                    "aside"
+                    "section"
+                    "footer";
+                grid-template-columns: 100%;
+                grid-template-rows: 100px 100px 300px 480px 100px; 
+            }
+        }
+    </style>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="section"></div>
+        <div id="footer"></div>
+    </div>
+
+</body>
+</html>

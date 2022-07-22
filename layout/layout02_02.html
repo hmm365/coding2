@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        #wrap {
+            display: grid;
+            width: 1200px;
+            margin: 0 auto;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside section article"
+                "footer footer footer";
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 100px 100px 780px 100px;
+        }
+        #header {
+            grid-area: header;
+            background-color: #C8E6C9;
+        }
+        #nav {
+            grid-area: nav;
+            background-color: #A5D6A7;
+        }
+        #aside {
+            grid-area: aside;
+            background-color: #81C784;
+        }
+        #section {
+            grid-area: section;
+            background-color: #66BB6A;
+        }
+        #article {
+            grid-area: article;
+            background-color: #4CAF50;
+        }
+        #footer {
+            grid-area: footer;
+            background-color: #43A047;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+            }
+        }   
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+                grid-template-areas: 
+                    "header header"
+                    "nav nav"
+                    "aside section"
+                    "article article"
+                    "footer footer";
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 100px 100px 630px 150px 100px;
+            }
+        }
+        @media (max-width: 480px){
+            #wrap {
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "aside"
+                    "section"
+                    "article"
+                    "footer";
+                grid-template-columns: 100%;
+                grid-template-rows: 100px 100px 200px 430px 150px 100px;
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="section"></div>
+        <div id="article"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
