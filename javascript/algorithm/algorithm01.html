@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 for문</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">for문</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">    
+        <div class="document">
+            <h2 class="t_tit">permutaion(순열)</h2>
+            <p class="t_desc2">
+                순열(順列, Permutation)은 이름 그대로 구별되는 사물을 순서대로 줄세워서 나열한 경우의 수이다.
+            </p>
+            <p class="t_desc">
+                숫자  구별: 이 성립해서 은 과는 독립적으로 까지 줄어들 수 있음<br>
+                서로 다른 혹은 구별되는 원소 개중에서 개를 뽑아서 줄 세우기<br>
+                서로 다른 원소 개를 뽑아서 서로 다른 주머니 에 넣기<br>
+                구별되는 사람 명에서 명을 뽑아서 줄 세우기<br>
+            </p>
+            <h3 class="t_tit2">for문으로 이용한 순열 경우의수</h3>
+            <div class="t_code">
+<pre><code class="language-js">    let iput = ["a", "b", "c"];
+    let count = 0;
+    
+    function permutation(arr) {
+        for(let i = 0; i &lt; arr.length; i++) {
+            for(let j = 0; j &lt; arr.length; j++){
+                if (i == j) continue;
+                for(let k = 0; k &lt; arr.length; k++){
+                    if (i == k) continue;
+                    if (j == k) continue;
+    
+                    console.log(arr[i], arr[j], arr[k]);
+                    count++
+                }
+            }
+        }
+    }
+    permutation(input);
+    console.log(count);
+</code></pre>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result01"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //result01 -->
+            <h3 class="t_tit2">for문으로 이용한 순열 경우의수</h3>
+            <div class="t_code">
+<pre><code class="language-js">    let iput = ["a", "b", "c"];
+    let count = 0;
+    
+    function permutation(arr, s, r) {
+        // 1. 재귀함수를 멈춰야할 조건
+        if (s == r){
+            count++;
+            console.log(arr.join(" "));
+            return;
+        }
+
+        // 2. 재귀를 돌면서 변경되어야 할  부분/메인 로직
+        for(let i = s; i &lt; arr.length; i++) {
+            [arr[s], arr[i]] = [arr[i], arr[s]]; // swap
+            permutation(arr, s +1, r);
+            [arr[s], arr[i]] = [arr[i], arr[s]]; // 원상복귀
+        }
+    }
+    
+    permutation(input, 0 , 2);
+    console.log(count);
+</code></pre>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result02"></div>
+                    </details>
+                </div>
+            </div> 
+            <!-- // result02 -->
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+{
+    let input = ["a", "b", "c"];
+    let count = 0;
+    let result;
+    let result_in = document.querySelector(".result01");
+    
+    function permutation(arr) {
+        for(let i = 0; i < arr.length; i++) {
+            for(let j = 0; j < arr.length; j++){
+                if (i == j) continue;
+                for(let k = 0; k < arr.length; k++){
+                    if (i == k) continue;
+                    if (j == k) continue;
+                    result = arr[i] + " " + arr[j] + " " + arr[k] + "<br>";         
+                    count++;
+                    result_in.innerHTML+=result;
+                }
+            }
+        }
+    }
+    
+    permutation(input);
+    result_in.innerHTML+="총 경우의 수는 " + count;
+    
+}
+{
+    let input = ["a", "b", "c"];
+    let count = 0;
+    let result = "";
+    result_in = document.querySelector(".result02");
+
+    function permutation(arr, s, r) {
+        // 1. 재귀함수를 멈춰야할 조건
+        if (s == r){
+            count++;
+
+            result += arr.join(" ");
+            result += "<br>"
+            return;
+        }
+        // 2. 재귀를 돌면서 변경되어야 할  부분/메인 로직
+        for(let i = s; i < arr.length; i++) {
+            [arr[s], arr[i]] = [arr[i], arr[s]]; // swap
+            permutation(arr, s +1, r);
+            [arr[s], arr[i]] = [arr[i], arr[s]]; // 원상복귀
+        }
+        
+    }
+    
+    permutation(input, 0 , 2);
+    result_in.innerHTML += result;
+    result_in.innerHTML += "총 경우의수는 " + count;
+}
+    </script>
+</body>
+</html>
