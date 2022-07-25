@@ -30,9 +30,9 @@
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
                 <li><a href="study/operator.html">연산자</a></li>
-                <li><a href="for.html">반복문</a></li>
-                <li><a href="if.html">조건문</a></li>
-                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="study/for.html">반복문</a></li>
+                <li><a href="study/if.html">조건문</a></li>
+                <li><a href="study/type.html">데이터타입</a></li>
             </ul>
         </nav>
     </header>
@@ -58,7 +58,7 @@
             <div id="sample01" class="sample">
                 <h3>01. if문 </h3>
                 <p>
-                    asdf
+                    if문은 조건식의 결과에 따라 중괄호 { } 로 묶어놓은 블록이 실행여부가 결정되는 조건문입니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
@@ -85,7 +85,7 @@
             <div id="sample02" class="sample">
                 <h3>02. if문 생략</h3>
                 <p>
-                    asdf
+                    if문은 조건식을 생략할수있습니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
@@ -110,7 +110,7 @@
             <div id="sample03" class="sample">
                 <h3>03. 다중 if문</h3>
                 <p>
-                    asdf
+                    다중 if문은 하나의 if문에 다른 if문을 추가할수있습니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
@@ -136,7 +136,7 @@
             <div id="sample04" class="sample">
                 <h3>04. 중첩 if문 </h3>
                 <p>
-                    asdf
+                    중첩If문은 중첩으로 묶을수있습니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
@@ -167,9 +167,9 @@
             </div> 
             <!-- //sample04 -->
             <div id="sample05" class="sample">
-                <h3>05. 중첩 if문 </h3>
+                <h3>05. 조건부 연산자(삼항 연산자) </h3>
                 <p>
-                    asdf
+                    조건부 삼항 연산자는 JavaScript에서 세 개의 피연산자를 취할 수 있는 유일한 연산자입니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
@@ -193,7 +193,8 @@
             <div id="sample06" class="sample">
                 <h3>06. switch문 </h3>
                 <p>
-                    asdf
+                    switch문은 if문과 같이 조건 제어문에 속합니다.<br>
+                    하지만 switch문은 if문처럼 조건식이 &gt;,&gt;=,&lt;,&lt;=와 같은 이상,이하,초과,미만같은 부등식이 사용될 수 없습니다.
                 </p>
                 <div class="script">
 <pre><code class="language-js">{
@@ -229,6 +230,115 @@
                 </div>
             </div> 
             <!-- //sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. whire문 </h3>
+                <p>
+                    swhile문은 조건문이 참일 때 실행되는 반복문이다. 조건은 문장안이 실행되기 전에 참, 거짓을 판단합니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    let num = 1;
+    result = document.querySelector(".sample07_result");
+
+    while( num &lt;= 5) {
+        result.innerHTML += "실행되었습니다.";
+        num++;
+    }
+    }
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample07_result">
+
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample07 -->
+            <div id="sample08" class="sample">
+                <h3>08. do whire문 </h3>
+                <p>
+                    테스트 조건이 거짓으로 평가될 때까지 지정된 구문을 실행하는 루프를 만듭니다.<br>
+                    단, 구문이 실행된 뒤에 테스트 조건이 평가됨으로 구문은 무조건 한 번은 실행됩니다
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    let num = 1;
+    result = document.querySelector(".sample08_result");
+
+    do {
+        result.innerHTML += "실행되었습니다.";
+        num++;
+    } while ( num &lt;= 5)
+    }
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample08_result">
+
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample08 -->
+            <div id="sample09" class="sample">
+                <h3>09. for문 </h3>
+                <p>
+                    for 문은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 블럭문)으로 이루어져 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    result = document.querySelector(".sample07_result");
+    for( let i=1; i&lt;5; i++) {
+        result.innerHTML += i+". 실행되었습니다.";
+    }
+
+    let num = [1, 2, 3, 4, 5];
+    for( let i=1; i&lt;num.length; i++) {
+        result.innerHTML += num[i]+". 실행되었습니다.";
+    }
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample09_result">
+
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample09 -->
+            <div id="sample10" class="sample">
+                <h3>09. 중첩 for문 </h3>
+                <p>
+                    for 문은 은 중첩으로도 사용할수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    result = document.querySelector(".sample07_result");
+    for( let i=1; i&lt;2; i++) {
+        result.innerHTML += (i+". 실행되었습니다.");
+        for( let j=0; j&lt;3; j++){
+            result.innerHTML += (j+". 실행되었습니다.");
+        }
+    }
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample10_result">
+
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample10 -->
         </div>
     </main>
     <!-- //main -->
@@ -336,7 +446,7 @@
         //08. do whire문
         {
             let num = 1;
-            result = document.querySelector(".sample07_result");
+            result = document.querySelector(".sample08_result");
 
             do {
                 result.innerHTML += "실행되었습니다.";
@@ -345,7 +455,7 @@
         }
         //09. for문
         {
-            result = document.querySelector(".sample07_result");
+            result = document.querySelector(".sample09_result");
             for( let i=1; i<5; i++) {
                 result.innerHTML += i+". 실행되었습니다.";
             }
@@ -357,7 +467,7 @@
         }
         //10. 중첩 for문
         {
-            result = document.querySelector(".sample07_result");
+            result = document.querySelector(".sample10_result");
             for( let i=1; i<2; i++) {
                 result.innerHTML += (i+". 실행되었습니다.");
                 for( let j=0; j<3; j++){
