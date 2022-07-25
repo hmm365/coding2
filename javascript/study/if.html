@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 if문</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">제어문</h2>
+            <p class="t_desc">
+                제어문(control flow statements)은 프로그램의 흐름을 제어하는 경우에 사용하는 실행문으로, 조건문, 반복문, 분기문 등이 포함되어 있습니다.
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit2">if 문</h3>
+            <p class="t_desc">
+                If문은 조건식의 결과에 따라 중괄호 { } 로 묶어놓은 블록이 실행여부가 결정되는 조건문입니다.
+            </p>
+            <p class="t_box">
+                if (조건 식1){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                }
+             </p>
+             <div id="sample04" class="sample">
+                <h3>04. 변수 : 지역변수 + 전역변수 + 매개변수</h3>
+                <p>
+                    전역변수는 함수 블록{} 밖이나 안에서 자유롭게 사용 가능하지만,
+                    지역변수는 함수 블록{} 안에서만 사용가능합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">{
+    var age = prompt("나이입력","  ");
+    var admissionFee = "";
+    if (age &lt; 13 || age &gt;= 65) {
+        admissionFee = "2,000원";
+    } else if (age &gt;= 13 && age &lt; 20) {
+        admissionFee = "4,000원";
+    } else {
+        admissionFee = "6,000원";
+    }
+    document.write(admissionFee); 
+}
+</code></pre>
+                </div>
+            </div>
+
+            <h3 class="t_tit2">중첩 if문</h3>
+            <p class="t_desc">
+                중첩If문은 중첩으로 묶을수있습니다.
+            </p>
+            <p class="t_box">
+                if (조건 식1){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if (조건 식1) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                }
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">{
+    var html = Number(prompt("html 점수입력", ""));
+    var css = Number(prompt("css 점수입력", ""));
+    var javascript = Number(prompt("javascript 점수입력", ""));
+    var avg = (html + css + javascript) / 3;
+    var comment;
+    if (avg &gt;= 60) {
+        if (html &lt; 40) {
+            comment = "HTML" + " 40점 미만 불합격";
+        } else if (css &lt; 40) {
+            comment = "CSS " + " 40점 미만 불합격";
+        } else if (javascript &lt; 40) {
+            comment = "JAVASCRIPT" + " 40점 미만 불합격";
+        } else {
+            comment = "평균 " + avg + "점 합격";
+        }
+    } else {
+        comment = "평균 " + avg + "점 불합격";
+    }
+    document.write(comment);
+}
+</code></pre>
+            </div>
+            <h3 class="t_tit2">switch 문</h3>
+            <p class="t_desc">
+                switch문은 if문과 같이 조건 제어문에 속합니다. 하지만 switch문은 if문처럼 조건식이 &gt;,&gt;=,&lt;,&lt;=와 같은 이상,이하,초과,미만같은 부등식이 사용될 수 없습니다.
+                </p>
+            <p class="t_box">
+                switch (값){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;case 값 :<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;case 값2 :<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;default :<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                }</p>
+            <div class="t_code">
+<pre><code class="language-js">{
+    var classification = prompt("아동, 청소년, 성인 중 선택 입력","");
+    switch (classification) {
+        case "아동":
+            classification += ": 입장료 무료";
+            break;
+        case "청소년":
+            classification += ": 입장료 2,000원";
+            break;
+        case "성인":
+            classification += ": 입장료 5,000원";
+            break;
+        default:
+            subject = "입력 값을 다시 확인하세요!";
+    }
+    document.write(classification);
+}
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <style>
+        table { 
+            border: 1px solid #cdcdcd;
+            border-collapse: collapse;
+        }
+        td { 
+            border: 1px solid #cdcdcd;
+            padding: 3px;
+        }
+    </style>
+    <script>
+
+    </script>
+</body>
+</html>

@@ -194,6 +194,11 @@ body {
     text-align: center;
 }
 
+.document .t_result {
+    margin-bottom: 40px;
+}
+
+
 /* Mobile */
 @media (max-width: 800px) {
     body {
@@ -302,87 +307,6 @@ body {
 .t_code .hljs-meta .hljs-keyword,
 .t_code .hljs-meta-keyword {
     font-weight: 700
-}
-
-.document i {
-    font-style: normal;
-    position: relative;
-}
-.document i::before {
-    content: '';
-    background-color: #0242f136;
-    width: 100%;
-    height: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-radius: 20px;
-}
-.document hr {
-    border: 0;
-    border-top: 1px dashed #DCDCDC;
-    margin-top: 45px;
-}
-.document .t_tit {
-    font-size: 30px;
-    line-height: 1.6;
-    margin-bottom: 5px;
-    font-weight: 400;
-}
-.document .t_tit2 {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-top: 50px;
-    margin-bottom: 5px;
-    font-weight: 400;
-}
-.document .t_tit3 {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: 400;
-}
-.document .t_desc {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 10px !important;
-}
-.document .t_desc2 {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 10px !important;
-    padding: 15px 20px !important;
-    border-left: 4px solid #0243F1;
-    background-color: #F9F9F9;
-}
-.document .t_box {
-    padding: 10px 20px;
-    background-color: #F9F9F9;
-    margin-bottom: 10px;
-    color: #666;
-    border-radius: 5px;
-}
-.document .t_table {
-    border: 1px solid #DCDCDC;
-    width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-.document .t_table tr th {
-    background-color: #F9F9F9;
-}
-.document .t_table tr th,
-.document .t_table tr td {
-    border: 1px solid #DCDCDC;
-    font-weight: normal;
-    padding: 8px 10px;
-    color: #666;
-}
-.document .t_table .ce {
-    text-align: center;
 }
 .t_code pre code.hljs {
     display: block;

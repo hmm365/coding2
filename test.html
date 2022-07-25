@@ -4,121 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        #wrap {
-            display: flex;
-            flex-wrap: wrap;
-            width: 1200px;
-            margin: 0 auto;
-        }
-        #header {
-            width: 100%;
-            height: 100px;
-            background-color: #B3E5FC;
-        }
-        #nav {
-            width: 100%;
-            height: 100px;
-            background-color: #81D4FA;
-        }
-        #aside {
-            width: 30%;
-            height: 780px;
-            background-color: #4FC3F7;
-        }
-        #container {
-            width: 70%;
-        }
-        #section_a {
-            width: 100%;
-            height: 260px;
-            background-color: #29B6F6;
-        }
-        #section_b {
-            width: 100%;
-            height: 260px;
-            background-color: #03A9F4;
-        }
-        #section_c {
-            width: 100%;
-            height: 260px;
-            background-color: #039BE5;
-        }
-        #footer {
-            width: 100%;
-            height: 100px;
-            background-color: #0288D1;
-        }
-        @media (max-width: 1220px){
-            #wrap {
-                width: 96%;
-            }
-            #container{
-                display: flex;
-                flex-wrap: wrap;
-            }
-            #section_b {
-                width: 50%;
-                height: 520PX;
-            }
-            #section_c {
-                width: 50%;
-                height: 520px;
-            }
-        }   
-        @media (max-width: 768px){
-            #wrap {
-                width: 100%;
-            }
-            #aside {
-                width: 30%;
-            }
-            #section_a {
-                height: 390px;
-            }
-            #section_b {
-                width: 100%;
-                height: 390PX;
-            }
-            #section_c {
-                display: none;
-            } 
-        }
-        @media (max-width: 480px){
-            #aside {
-                width: 100%;
-                height: 200px;
-            }
-            #container {
-                width: 100%;
-            }
-            #section_a {
-                width: 100%;
-                height: 430px;
-            }
-            #section_b {
-                width: 100%;
-                height: 150px;
-            } 
-        }
-    </style>
+    <title>test</title>
 </head>
 <body>
-    <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="container">
-            <div id="section_a"></div>
-            <div id="section_b"></div>
-            <div id="section_c"></div>
-        </div>
-        <div id="footer"></div>
-    </div>
+
+<script>
+{
+    let a = [4, 7, 12];
+    let b = [true, false, true];
+
+    function solution(left, right) {
+        var answer = 0;
+        let count = 0;
+
+        for(let i = left; i <= right; i++) {
+            count = 0;
+            for(let j = 1; j <= i; j++){
+                if(i % j == 0) count++;
+            }
+            if(count % 2) answer -= i; 
+                else answer += i;  
+    }
+        return answer;
+
+}
+    
+
+    function solution1(absolutes, signs) {
+        var answer = 0;
+
+        for(let i=0; i < absolutes.length; i++) {
+            if(signs[i] == false ) {
+                absolutes[i] -= absolutes[i];
+                absolutes[i] -= absolutes[i];
+            }
+            answer += absolutes[i];
+        }
+
+        return answer;
+    }
+
+}
+</script>
 </body>
 </html>
