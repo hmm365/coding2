@@ -75,19 +75,19 @@
         var answer = 0;
         let count = 0;
 
-        for(let i = left; i &lt;= right; i++) {
-            count = 0;
-            for(let j = 1; j &lt;= i; j++){
-                if(i % j == 0) count++;
+        for(let i = left; i &lt;= right; i++) { // left 와 right 의 사이
+            count = 0;                          // 초기화
+            for(let j = 1; j &lt;= i; j++){     
+                if(i % j == 0) count++;         // 갯수
             }
-            if(count % 2) answer -= i; 
+            if(count % 2) answer -= i;          // 약수의갯수가 짝수면 answer에 i를 더합니다. 그게 아니라면 answer에 i를 뺌니다.
                 else answer += i;  
     }
         return answer;
     }
 </code></pre>
             <p class="t_box">
-                총평 : 약수의 합만 알면 나머지는 다할수있다.<br>
+                총평 : 약수를 구하고 조건문으로 하면 쉽게 풀리는것 같다<br>
                 출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/77884" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/77884</a> 
             </p>
             </div>
