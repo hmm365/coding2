@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃4</title>
+    <style>
+        *{
+            box-sizing: 0;
+            padding: 0;
+            margin: 0;
+        }
+        #header {
+            height: 100px;
+            background-color: #E0F2F1;
+        }
+        #nav {
+            height: 300px;
+            background-color: #80CBC4;
+        }
+        #section {
+            height: 580px;
+            background-color: #26A69A;
+        }
+        #footer {
+            height: 100px;
+            background-color: #00897B;
+        }
+        /*
+            아이디/클랙스
+            #   / .
+            한번 / 두개이상(중복가능) 
+            전체적인틀, 스크립트 --> id
+            세부적인 영역, 반복 --> class
+         */
+         .container {
+            width: 1200px;
+            height: inherit; 
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.3);
+         }
+         @media (max-width: 1220px) {
+            .container {
+                width: 96%;
+            }
+         }
+         @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+         }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <div id="section">
+            <div class="container"></div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>

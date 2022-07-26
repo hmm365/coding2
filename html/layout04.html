@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/tokyo-night-dark.min.css">
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 이중호</span>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="semantic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li><a href="layout03.html">레이아웃03</a></li>
+                <li class="active"><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃04</h2>
+                <p class="t_desc">
+                    이번 레이아웃은 전체 영역이 들어간 구조입니다.<br>
+                    실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
+                    가운데 영역을 설정합니다.
+                </p>
+                <div class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FHRZlRx2Y2dVmr0V2sfpKd1%2FUntitled%3Fnode-id%3D2%253A313" allowfullscreen></iframe>
+                </div>
+
+                <hr>
+
+                <h3 class="t_tit2">CSS구성</h3>
+                <p class="t_desc2">
+                    이번 레이아웃은 전체 영역이 들어간 구조입니다.<br>
+                    실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
+                    가운데 영역을 설정합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">*{
+box-sizing: 0;
+padding: 0;
+margin: 0;
+}
+#header {
+    height: 100px;
+    background-color: #E0F2F1;
+}
+#nav {
+    height: 300px;
+    background-color: #80CBC4;
+}
+#section {
+    height: 580px;
+    background-color: #26A69A;
+}
+#footer {
+    height: 100px;
+    background-color: #00897B;
+}
+.container {
+    width: 1200px;
+    height: inherit; 
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 1220px) {
+    .container {
+        width: 96%;
+    }
+ }
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+ }
+</code></pre>
+                    <p class="t_desc">결과</p>
+                    <div class="t_iframe">
+                        <iframe scrolling="no" title="Untitled" src="https://codepen.io/hmm365/embed/dymzBjd?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/hmm365/pen/dymzBjd">
+                            Untitled</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+        <script>hljs.highlightAll();</script>
+</body>
+</html>

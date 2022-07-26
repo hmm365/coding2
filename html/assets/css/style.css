@@ -109,9 +109,7 @@ table {
     font-family: "Tmon";
 }
 
-.main_menu {
-    margin-bottom: 20px;
-}
+
 .main_menu ul li {
     display: inline;
 }
@@ -131,7 +129,7 @@ table {
     border: 1px solid #000;
     padding: 30px;
     background-color: #fff;
-    
+    margin-top: 20px;
 }
 .main_refer .table table {
     width: 100%;
@@ -198,4 +196,108 @@ table {
     .main_header h2 em{
         font-size: 30px;
     }
+}
+
+/* Tistroy 용 문서 */
+
+.document i {
+    position: relative;
+    font-style: normal;
+}
+.document hr {
+    border: 0;
+    border-top: 1px dashed #dcdcdc;
+    margin-top: 45px;
+}
+.document i::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: #0242f136;
+}
+.document .t_tit {
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.document .t_tit2 {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.document .t_tit3 {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.document .t_desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px !important;
+}
+.document .t_desc2 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px !important;
+    padding: 15px 20px !important;
+    border-left: 4px solid #00DB72;
+    background-color: #f9f9f9;
+}
+.document .t_box {
+    padding: 20px !important;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    color: #666;
+    border-radius: 5px;
+}
+.document .t_table {
+    border: 1px solid #f9f9f9;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.document .t_table tr th {
+    background-color: #f9f9f9;
+}
+.document .t_table tr th,
+.document .t_table tr td {
+    border: 1px solid #dcdcdc;
+    font-weight: normal;
+    padding: 8px 10px;
+    color: #666;
+}
+.document .t_table .ce {
+    text-align: center;
+}
+
+.document .t_result {
+    margin-bottom: 40px;
+}
+
+.document .t_iframe {
+    position: relative;
+    padding-top: 56%;
+    width: 100%;
+    height: 0;
+}
+
+.document .t_iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
 }

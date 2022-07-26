@@ -1,0 +1,81 @@
+<div class="document">
+<h2 class="t_tit">for문</h2>
+<p class="t_desc">for 문은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 블럭문)으로 이루어져 있습니다.</p>
+<p class="t_box">for (초기 값; 조건식; 증가감식;){<br />&nbsp;&nbsp;&nbsp;&nbsp;실행문;<br />}</p>
+<hr data-ke-style="style1" />
+<h3 class="t_tit2">1부터 100까지 출력하기</h3>
+<div class="t_code">
+<pre><code class="language-js">//1부터 100까지 출력하기
+for (let i = 1; i &lt;= 100; i++){ // i = i + 1 와 같다.
+    document.write(i);
+}
+// 결과는 : 1 2 3 4 5﹒﹒﹒﹒﹒100
+
+</code></pre>
+</div>
+<h3 class="t_tit2">1부터 100까지 짝수 출력하기</h3>
+<p class="t_desc">짝수로 출력할 때는 증가값을 2로 해주면 됩니다.</p>
+<div class="t_code">
+<pre ><code class="language-js">//1부터 100까지 짝수 출력하기
+for (let i = 2; i &lt;= 100; i+=2){ // i = i + 2 와 같다.
+    document.write(i);
+}
+// 결과는 : 2 4 6 8﹒﹒﹒﹒﹒100
+
+</code></pre>
+</div>
+<h3 class="t_tit2" >1부터 100까지 출력하기</h3>
+<div class="t_code">
+<pre ><code class="language-js">//1부터 100까지 출력하기
+for (let i = 1; i &lt;= 100; i++){ // i = i + 1 와 같다.
+    document.write(i);
+}
+// 결과는 : 1 2 3 4 5﹒﹒﹒﹒﹒100
+
+</code></pre>
+</div>
+<h3 class="t_tit2">for문을 이용해서 테이블 출력하기</h3>
+<p class="t_desc">중첩 for문을 이용해서 테이블을 만들 수 있습니다.</p>
+<div class="t_code">
+<pre><code class="language-js">//중첩 for문을 이용해서 테이블 만들기
+let table = "&lt;table&gt;";
+// table += &lt;tr&gt;;
+// table += &lt;td&gt;;
+// table += &lt;/td&gt;;
+// table += &lt;/tr&gt;;
+// table += &lt;/table&gt;;
+for(let i=1; i&lt;=9; i++){
+    table += "&lt;tr&gt;";
+                
+    for(let j=1; j&lt;=9; j++){
+        table += "&lt;td&gt;" + i + " * " + j + " = " + i*j + "&lt;/td&gt;";
+    }
+    table += "&lt;/tr&gt;";
+}
+    table += "&lt;/table&gt;";
+    document.write(table);
+</code></pre>
+<div class="t_result"><details>
+<summary>결과 확인하기</summary>
+<div class="result01">&nbsp;</div>
+</details></div>
+</div>
+</div>
+
+<script>
+        {
+            let row = 9;
+            let col = 9;
+            let table = "<table>";
+                for(let i=1; i<=row; i++){
+                    table += "<tr>";
+                    
+                    for(let j=1; j<=col; j++){
+                        table += "<td>" + i + " * " + j + " = " + i*j + "</td>";
+                    }
+                    table += "</tr>";
+                }
+                table += "</table>";
+                document.querySelector(".result01").innerHTML = table;
+        }
+    </script>

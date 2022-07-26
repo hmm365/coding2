@@ -33,6 +33,7 @@
                 <li><a href="for.html">반복문</a></li>
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터타입</a></li>
+                <li><a href="function.html">함수</a></li>
             </ul>
         </nav>
     </header>
@@ -76,23 +77,23 @@
                 <h3 class="t_tit2">1부터 50까지 출력하기</h3>
                 <div class="t_code">
     <pre><code class="language-js">    //1부터 50까지 출력하기
-        document.write("&lt;br&gt; for : ");
-        for(let i = 1; i &lt;= 50; i++) {
-            document.write(i + " ");
-        }
-        i = 1
-        document.write("&lt;br&gt; while : ");
-        while(i &lt;= 50) {
-            document.write(i + " ");
-            i++;
-        }
-        i = 1;
-        document.write("&lt;br&gt; do while : ");
-        
-        do {
-            document.write(i + " ");
-            i++;
-        }while(i &lt;= 50)
+    document.write("&lt;br&gt; for : ");
+    for(let i = 1; i &lt;= 50; i++) {
+        document.write(i + " ");
+    }
+    i = 1
+    document.write("&lt;br&gt; while : ");
+    while(i &lt;= 50) {
+        document.write(i + " ");
+        i++;
+    }
+    i = 1;
+    document.write("&lt;br&gt; do while : ");
+    
+    do {
+        document.write(i + " ");
+        i++;
+    }while(i &lt;= 50)
     </code></pre>
                     <div class="t_result">
                         <details>
@@ -108,26 +109,26 @@
                 <h3 class="t_tit2">반복문을 이용해서 1~50까지 출력(짝수는 빨간색, 홀수는 파란색)</h3>
                 <div class="t_code">
     <pre><code class="language-js">    //반복문을 이용해서 1~50까지 출력(짝수는 빨간색, 홀수는 파란색)
-        //for 문
-        document.write("&lt;br&gt; for : ");
-        for(let i = 1; i &lt;= 50; i++) {
-            document.write(i + " ");
-        }
-        //while 문
-        i = 1
-        document.write("&lt;br&gt; while : ");
-        while(i &lt;= 50) {
-            document.write(i + " ");
-            i++;
-        }
-        //do while 문
-        i = 1;
-        document.write("&lt;br&gt; do while : ");
-        
-        do {
-            document.write(i + " ");
-            i++;
-        }while(i &lt;= 50)
+    //for 문
+    document.write("&lt;br&gt; for : ");
+    for(let i = 1; i &lt;= 50; i++) {
+        document.write(i + " ");
+    }
+    //while 문
+    i = 1
+    document.write("&lt;br&gt; while : ");
+    while(i &lt;= 50) {
+        document.write(i + " ");
+        i++;
+    }
+    //do while 문
+    i = 1;
+    document.write("&lt;br&gt; do while : ");
+    
+    do {
+        document.write(i + " ");
+        i++;
+    }while(i &lt;= 50)
     </code></pre>
                     <div class="t_result">
                         <details>
@@ -143,23 +144,23 @@
                 <h3 class="t_tit2">1부터 50까지 출력하기 : 조건부 연산자</h3>
                 <div class="t_code">
     <pre><code class="language-js">    //1부터 50까지 출력하기 : 조건부 연산자
-        let i = 1;
-        // for문
-        for(let i = 1; i &lt;= 50; i++) {
-            i % 2 == 0 ? document.write("&lt;span&gt; style='color: red'>"+i+"&lt;/span&gt;") :
-                        document.write("&lt;span&gt; style='color: blue'>"+i+"&lt;/span&gt;");
-        }
-        // while문
-        while(i &lt;= 50) {
-            i % 2 == 0 ? document.write("&lt;span&gt; style='color: red'>"+i+"&lt;/span&gt;") :
-                        document.write("&lt;span&gt; style='color: blue'>"+i+"&lt;/span&gt;");
-            i++
-        }
-        // do while문
-        do {
-            i % 2 == 0 ? document.write("&lt;span&gt; style='color: red'>"+i+"&lt;/span&gt;") :
-                        document.write("&lt;span&gt; style='color: blue'>"+i+"&lt;/span&gt;");
-        } while(i &lt;= 50);
+    let i = 1;
+    // for문
+    for(let i = 1; i &lt;= 50; i++) {
+        i % 2 == 0 ? document.write("&lt;span&gt; style='color: red'>"+i+"&lt;/span&gt;") :
+                    document.write("&lt;span&gt; style='color: blue'>"+i+"&lt;/span&gt;");
+    }
+    // while문
+    while(i &lt;= 50) {
+        i % 2 == 0 ? document.write("&lt;span&gt; style='color: red'>"+i+"&lt;/span&gt;") :
+                    document.write("&lt;span&gt; style='color: blue'>"+i+"&lt;/span&gt;");
+        i++
+    }
+    // do while문
+    do {
+        i % 2 == 0 ? document.write("&lt;span&gt; style='color: red'>"+i+"&lt;/span&gt;") :
+                    document.write("&lt;span&gt; style='color: blue'>"+i+"&lt;/span&gt;");
+    } while(i &lt;= 50);
     </code></pre>
                     <div class="t_result">
                         <details>
@@ -176,40 +177,39 @@
                 <p class="t_desc">중첩 반복문을 이용해서 만들 수 있습니다.</p>
                 <div class="t_code">
     <pre><code class="language-js">    //중첩 반복문을 이용하여 구구단 만들기
-        let i = 1;
-        let j = 1
-        
-        //for문
-        for(let i = 1; i &lt;= 9; i++) {
-            for(let j = 1; j &lt;= i; j++){
-                let sum = i * j;
-                document.write(i+"x"+j+"="+sum+" ");
-            }
-            document.write("&lt;br&gt;");
+    let i = 1;
+    let j = 1
+    
+    //for문
+    for(let i = 1; i &lt;= 9; i++) {
+        for(let j = 1; j &lt;= i; j++){
+            let sum = i * j;
+            document.write(i+"x"+j+"="+sum+" ");
         }
-        //while 문
-        i = 1;
-        j = 1;
-        while(i &lt;= 9) {
-            while(j &lt;= i) {
-                let sum = i * j;
-                document.write(i+"x"+j+"="+sum+" ");
-                j++
-            }
-            document.write("&lt;br&gt;");
-            i++
+        document.write("&lt;br&gt;");
+    }
+    //while 문
+    i = 1;
+    j = 1;
+    while(i &lt;= 9) {
+        while(j &lt;= i) {
+            let sum = i * j;
+            document.write(i+"x"+j+"="+sum+" ");
+            j++
         }
-        i = 1;
-        j = 1;
-
-        //do while문
+        document.write("&lt;br&gt;");
+        i++
+    }
+    i = 1;
+    j = 1;
+    //do while문
+    do {
         do {
-            do {
-                let sum = i * j;
-                document.write(i+"x"+j+"="+sum+" ");
-            } while(j &lt;= i)
-            document.write("&lt;br&gt;");
-        } while(i &lt;= 9)
+            let sum = i * j;
+            document.write(i+"x"+j+"="+sum+" ");
+        } while(j &lt;= i)
+        document.write("&lt;br&gt;");
+    } while(i &lt;= 9)
     </code></pre>
                     <div class="t_result">
                         <details>
@@ -225,19 +225,18 @@
                 <h3 class="t_tit2">반복문을 이용해서 테이블 출력하기</h3>
                 <div class="t_code">
     <pre><code class="language-js">    //테이블로 1부터 100까지 넣기
-        let table = "&lt;table&gt;";
-            let count=1;
-            for(let i=1; i &lt;= 10; i++){
-                table += "&lt;tr&gt;";
-                    for(let j=1; j &lt;= 10; j++ ){
-                        table += "&lt;td&gt;"+count+"&lt;/td&gt;";
-                        count++;
-                    }
-                table += "&lt;/tr&gt;";
+    let table = "&lt;table&gt;";
+    let count=1;
+    for(let i=1; i &lt;= 10; i++){
+        table += "&lt;tr&gt;";
+            for(let j=1; j &lt;= 10; j++ ){
+                table += "&lt;td&gt;"+count+"&lt;/td&gt;";
+                count++;
             }
-
-            table += "&lt;/table&gt;";
-            document.write(table);
+        table += "&lt;/tr&gt;";
+    }
+    table += "&lt;/table&gt;";
+    document.write(table);
     </code></pre>
                     <div class="t_result">
                         <details>
@@ -335,7 +334,6 @@
             
 
         }
-        document.write("<br>");
         //for문을 이용해서 1~100까지 출력(짝수는 빨간색, 홀수는 파란색) : 조건부 연산자
         {
             let i = 1;

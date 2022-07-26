@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조합(combination)</title>
+    <title>약수의 개수와 덧셈</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
     <script src="../assets/js/highlight.min.js"></script>
@@ -37,70 +37,61 @@
     <!-- //header -->
     <main id="main">    
         <div class="document">
-            <h2 class="t_tit">조합(combination)</h2>
+            <h2 class="t_tit">약수의 개수와 덧셈</h2>
             <p class="t_desc2">
-                서로 다른 n개의 원소 중에서 r를 중복 없이 골라 <i>순서에 상관 없이</i> 나열하는 경우의 수
+                두 정수 left와 right가 매개변수로 주어집니다. left부터 right까지의 모든 수들 중에서, 약수의 개수가 짝수인 수는 더하고, 약수의 개수가 홀수인 수는 뺀 수를 return 하도록 solution 함수를 완성해주세요.
             </p>
-            <p class="t_desc">
-                4개의 숫자 카드에서 2개를 뽑는 경우의수<br>
+            <p class="t_box">
+                제한 사항 : 1 ≤ left ≤ right ≤ 1,000<br>
+                입출력 예<br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>left</th>
+                            <th>right</th>
+                            <th>result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">43</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">52</td>
+                        </tr>
+                    </tbody>
+                </table>
             </p>
-            <h3 class="t_tit2">for문으로 이용한 조합 경우의수</h3>
+
+            <hr>
+
+            <h3 class="t_tit2">약수의 개수와 덧셈</h3>
             <div class="t_code">
-<pre><code class="language-js">    let input = [1, 2, 3, 4];
-    let count = 0;
-    let result;
-    let result_in = document.querySelector(".result01");
-    
-    function permutation(arr) {
-        for(let i = 0; i &lt; arr.length; i++) {
-            for(let j = i + 1; j &lt; arr.length; j++){
-                    result = arr[i] + " " + arr[j] + "<br>";         
-                    count++;
-                    console.log(result); 
+<pre><code class="language-js">     function solution(left, right) {
+        var answer = 0;
+        let count = 0;
+
+        for(let i = left; i &lt;= right; i++) {
+            count = 0;
+            for(let j = 1; j &lt;= i; j++){
+                if(i % j == 0) count++;
             }
-        }
+            if(count % 2) answer -= i; 
+                else answer += i;  
     }
-    permutation(input);
-    console.log(count); 
+        return answer;
+    }
 </code></pre>
-                <div class="t_result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div class="result01"></div>
-                    </details>
-                </div>
+            <p class="t_box">
+                총평 : 약수의 합만 알면 나머지는 다할수있다.<br>
+                출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/77884" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/77884</a> 
+            </p>
             </div>
             <!-- //result01 -->
-            <h3 class="t_tit2">재귀함수 으로 이용한 조합 경우의수</h3>
-            <div class="t_code">
-<pre><code class="language-js">    let input = ["a", "b", "c"];
-    let ouput = [];
-    let count = 0;
-    result = document.querySelector(".result02");
-
-    function combination(arr, data, s, idx, r) {
-        if(s == r){
-            count++;
-            console.log(data + "<br>");
-        }
-        for(let i = 0; i >= r - s; i++){
-            data[s] = arr[i];
-            combination(arr, data, s + 1, i+1, r - 1);
-        }
-        
-    }
-    
-    combination(input, data, 0, 0, 2);
-    console.log("총 경우의수는 " + count);
-</code></pre>
-                <div class="t_result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div class="result02"></div>
-                    </details>
-                </div>
-            </div> 
-            <!-- // result02 -->
         </div>
     </main>
     <!-- //main -->
@@ -113,46 +104,21 @@
     </script> 
     <script>
 {
-    let input = [1, 2, 3, 4]; //4C2
-    let count = 0;
-    let result;
-    let result_in = document.querySelector(".result01");
-    
-    function permutation(arr) {
-        for(let i = 0; i < arr.length; i++) { //뽑는갯수
-            for(let j = i + 1; j < arr.length; j++){ // 마지막 인덱스에서 필터링
-                    result = arr[i] + " " + arr[j] + "<br>";         
-                    count++;
-                    result_in.innerHTML+=result;
+    function solution(left, right) {
+        var answer = 0;
+        let count = 0;
+
+        for(let i = left; i <= right; i++) {
+            count = 0;
+            for(let j = 1; j <= i; j++){
+                if(i % j == 0) count++;
             }
-        }
+            if(count % 2) answer -= i; 
+                else answer += i;  
+    }
+        return answer;
     }
     
-    permutation(input);
-    result_in.innerHTML+="총 경우의 수는 " + count;
-    
-}
-{
-
-    // arr : input 데이터 , data : output 데이터, s : 시작 인덱스, idx : 현재 위치정보, r : 선택 개수
-    let input = [1, 2, 3, 4];
-    let output = [];
-    let count = 0;
-    result = document.querySelector(".result02");
-        function combinationRecursion(arr, data, s, idx, r) {
-            if (s === r) {
-                count++;
-                result.innerHTML += data + "<br>";
-                return;
-            }     
-            for (let i = idx; arr.length - i >= r - s; i++) {
-                data[s] = arr[i];
-                combinationRecursion(arr, data, s + 1, i + 1, r); // Recursion
-            }
-}
-
-combinationRecursion(input, output, 0, 0, 2); // Main Call
-result.innerHTML += "총 경우의수는 " + count;
 }
 
     </script>

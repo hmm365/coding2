@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/tokyo-night-dark.min.css">
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 이중호</span>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="semantic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li class="active"><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li><a href="layout03.html">레이아웃03</a></li>
+                <li><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃01</h2>
+                <p class="t_desc">
+                    이번 레이아웃은 사이드메뉴가 하나 컨텐츠가 두개 들어간 구조입니다.<br>
+                    float, flex, grid 를이용하여 구조화를 할수있습니다.<br>
+                    flex 같은경우는 컨테츠를 묶어서 구조화 합니다.
+                </p>
+                <div class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FHRZlRx2Y2dVmr0V2sfpKd1%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+                </div>
+
+                <hr>
+
+                <h3 class="t_tit2">float를 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    CSS 속성(property) float 은 한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가<br>
+                    그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #FFB74D;
+    float: left;
+}
+#section{
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
+    float: left;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: #FF9800;
+    clear: both;
+}
+@media (max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section{
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                    <p class="t_desc">결과</p>
+                    <div class="t_iframe">
+                        <iframe scrolling="no" title="레이아웃 01 folat" src="https://codepen.io/hmm365/embed/eYMEvJE?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/hmm365/pen/eYMEvJE">
+                            레이아웃 01 folat</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                          </iframe>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3 class="t_tit2">flex를 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    flex CSS 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다.<br>
+                    flex는 flex-grow, flex-shrink, flex-basis의 단축 속성입니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #FFB74D;
+}
+#section{
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: #FF9800;
+}
+@media (max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section{
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                    <p class="t_desc">결과</p>
+                    <div class="t_iframe">
+                        <iframe scrolling="no" title="레이아웃01 flex" src="https://codepen.io/hmm365/embed/YzaxZyB?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/hmm365/pen/YzaxZyB">
+                            레이아웃01 flex</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                          </iframe>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3 class="t_tit2">grid를 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    CSS 그리드 레이아웃은 웹페이지를 위한 이차원 레이아웃 시스템입니다.<br>
+                    이 기능을 통해 콘텐츠를 행과 열에 배치할 수 있으며 복잡한 레이아웃을 직접 직관적으로 구축할 수 있는 많은 기능이 있습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap{
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "aside section"
+        "footer footer";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100px 100px 780px 100px; 
+}
+#header{
+    grid-area: header;
+    background-color: #FFE0B2;
+}
+#nav{
+    grid-area: nav;
+    background-color: #FFCC80;
+}
+#aside {
+    grid-area: aside;
+    background-color: #FFB74D;
+}
+#section{
+    grid-area: section;
+    background-color: #FFA726;
+}
+#footer{
+    grid-area: footer;
+    background-color: #FF9800;
+}
+@media (max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    #wrap {
+        grid-template: 
+            "header"
+            "nav"
+            "aside"
+            "section"
+            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 100px 300px 480px 100px; 
+    }
+}
+</code></pre>
+                    <p class="t_desc">결과</p>
+                    <div class="t_iframe">
+                        <iframe scrolling="no" title="레이아웃01 grid" src="https://codepen.io/hmm365/embed/GRxvWpb?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/hmm365/pen/GRxvWpb">
+                            레이아웃01 grid</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                          </iframe>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
