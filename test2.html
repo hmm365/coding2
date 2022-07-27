@@ -12,90 +12,99 @@
             font-size: 30px;
         }
         #wrap {
-            width: 1200px;
             margin: 0 auto;
+            width: 1200px;
         }
         #header {
-            width: 1200px;
+            width: 100%;
             height: 100px;
-            background-color: #8DFF93;
             overflow: hidden;
+            background-color: #00FF0C;
             text-align: center;
             line-height: 100px;
         }
         #header .logo {
-            width: 300px;
+            width: 30%;
             height: 100px;
-            background-color: #00FF0C;
             float: left;
+            background-color: #00FF0C;
         }
         #header .menu {
-            width: 900px;
+            width: 70%;
             height: 100px;
-            background-color: #8DFF93;
             float: left;
+            background-color: #8DFF93;
         }
         #banner {
-            width: 1200px;
+            width: 100%;
             height: 400px;
             background-color: #81F586;
+            overflow: hidden;
             text-align: center;
             line-height: 400px;
         }
+        #banner .imgslides {
+            width: 66.66666666667%;
+            height: 400px;
+            background-color: #81F586;
+            float: left;
+        }
+        #banner .aside {
+            width: 33.33333333333%;
+            height: 400px;
+            background-color: #97FF9C;  
+            float: left;
+        }
         #section {
-            width: 1200px;
+            width: 100%;
             height: 300px;
-            background-color: #B9FFBC;
+            background-color: #81F586;
+            overflow: hidden;
             text-align: center;
             line-height: 300px;
-            overflow: hidden;
         }
         #section .box1 {
-            width: 400px;
+            width: 33.33333333333%;
             height: 300px;
             background-color: #EAFFEB;
             float: left;
         }
         #section .box2 {
-            width: 400px;
+            width: 33.33333333333%;
             height: 300px;
             background-color: #D6FFD8;
             float: left;
         }
         #section .box3 {
-            width: 400px;
+            width: 33.33333333333%;
             height: 300px;
             background-color: #B9FFBC;
             float: left;
         }
         #footer {
-            width: 1200px;
-            height: 100px;
-            background-color: #97FF9C;
-            overflow: hidden;
-        }
-        #footer .footer1 {
-            width: 200px;
+            width: 100%;
             height: 100px;
             background-color: #B9FFBC;
-            text-align: center;
+            overflow: hidden;
             line-height: 100px;
+            text-align: center;
+        }
+        #footer .foo1 {
+            width: 25%;
+            height: 100px;
+            background-color: #81F586;
             float: left;
         }
-        #footer .footer2 {
-            width: 800px;
+        #footer .foo2 {
+            width: 50%;
             height: 100px;
-            background-color: #97FF9C;
-            text-align: center;
-            line-height: 100px;
+            background-color: #8DFF93;
             float: left;
         }
-        #footer .footer3 {
-            width: 200px;
+        #footer .foo3 {
+            width: 25%;
             height: 100px;
-            background-color: #EAFFEB;
-            text-align: center;
-            line-height: 100px;
+            background-color: #00FF0C;
             float: left;
         }
     </style>
@@ -107,18 +116,39 @@
             <div class="menu">메뉴</div>
         </div>
         <div id="banner">
-            이미지슬라이드
+            <div class="imgslides">이미지슬라이드</div>
+            <div class="aside">광고</div>
         </div>
         <div id="section">
-            <div class="box1">공지사항</div>
+            <div class="box1">공지</div>
             <div class="box2">갤러리</div>
             <div class="box3">팝업</div>
         </div>
         <div id="footer">
-            <div class="footer1">로고</div>
-            <div class="footer2">카페라이트</div>
-            <div class="footer3">소셜미디어</div>
+            <div class="foo1">몰</div>
+            <div class="foo2">라</div>
+            <div class="foo3">요</div>
         </div>
     </div>
 </body>
+
+<script>
+    {
+        let result = document.querySelector(".imgslides");
+        result.innerHTML = ''; //초기화
+        for(let i=1; i <= 9; i++) {
+            if(i % 2 == 1){
+                result.innerHTML += i;
+            }
+        }
+    }
+    {
+        let result = document.querySelector(".menu");
+        result.innerHTML = "";
+        for(let i=1; i <= 13; i++) {
+                result.innerHTML += i;
+            }
+    }
+    
+</script>
 </html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-size: 30px;
+            color: #fff;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #F48080;
+        }
+        #banner {
+            width: 100%;
+            height: 400px;
+            background-color: #EC5C5C;
+        }
+        #ad {
+            width: 100%;
+            height: 500px;
+            background-color: #FEA5A5;
+        }
+        #section {
+            width: 100%;
+            height: 500px;
+            background-color: #FFBFBF;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #FF9C9C;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        .header-logo {
+            width: 300px;
+            height: 100px;
+            background-color: #F86464;
+            float: left;
+        }
+        .header-menu {
+            width: 900px;
+            height: 100px;
+            background-color: #FEA5A5;
+            float: left;
+        }
+        .banner {
+            width: 1200px;
+            height: 400px;
+            background-color: #FF8A8A;
+        }
+        .ad-top {
+            width: 1200px;
+            height: 250px;
+            background-color: #EA8686;
+        }
+        .ad-bom {
+            width: 1200px;
+            height: 250px;
+            background-color: #F39C9C;
+        }
+        
+        .ad-top .ad-box1 {
+            width: 200px;
+            height: 250px;
+            float: left;
+            background-color: #F39C9C;
+        }
+        .ad-top .ad-box2 {
+            width: 200px;
+            height: 250px;
+            float: left;
+            background-color: #EA8686;
+        }
+        .ad-top .ad-box3 {
+            width: 200px;
+            height: 250px;
+            float: left;
+            background-color: #EE7C7C;
+        }
+        .ad-top .ad-box4 {
+            width: 200px;
+            height: 250px;
+            float: left;
+            background-color: #C87575;
+        }
+        .ad-top .ad-box5 {
+            width: 200px;
+            height: 250px;
+            float: left;
+            background-color: #D66B6B;
+        }
+        .ad-top .ad-box6 {
+            width: 200px;
+            height: 250px;
+            float: left;
+            background-color: #EE7C7C;
+        }
+        .ad-bom .ad-box7 {
+            width: 1200px;
+            height: 250px;
+            float: left;
+            background-color: #EA7F7F;
+        }
+        .section-box1 {
+            width: 740px;
+            height: 500px;
+            float: left;
+            background-color: #EB6666;
+        }
+        .section-box2 {
+            width: 460px;
+            height: 250px;
+            float: left;
+            background-color: #CE5F5F;
+        }
+        .section-box3 {
+            width: 460px;
+            height: 250px;
+            float: left;
+            background-color: #FE7F7F;
+        }
+        .footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #FF8888;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header-logo"></div>
+                <div class="header-menu"></div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="container">
+                <div class="banner"></div>
+            </div>
+        </div>
+        <div id="ad">
+            <div class="container">
+                <div class="ad-top">
+                    <div class="ad-box1"></div>
+                    <div class="ad-box2"></div>
+                    <div class="ad-box3"></div>
+                    <div class="ad-box4"></div>
+                    <div class="ad-box5"></div>
+                    <div class="ad-box6"></div>
+                </div>
+                <div class="ad-bom">
+                    <div class="ad-box7"></div>
+                </div>
+            </div>
+        </div>
+        <div id="section">
+            <div class="container">
+                <div class="section-box1"></div>
+                <div class="section-box2"></div>
+                <div class="section-box3"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    {
+        const arr = [
+            "로고", "메뉴", "이미지슬라이드", 
+            "광고", "기사1", "기사2", 
+            "기사3", "기사4", "기사5", 
+            "기사6", "기사7", "공지사항1",
+            "공지사항2", "공지사항3", "푸터"
+        ];
+        let result = [
+            document.querySelector(".header-logo"),
+            document.querySelector(".header-menu"),
+            document.querySelector(".banner"),
+            document.querySelector(".ad-box1"),
+            document.querySelector(".ad-box2"),
+            document.querySelector(".ad-box3"),
+            document.querySelector(".ad-box4"),
+            document.querySelector(".ad-box5"),
+            document.querySelector(".ad-box6"),
+            document.querySelector(".ad-box7"),
+            document.querySelector(".section-box1"),
+            document.querySelector(".section-box2"),
+            document.querySelector(".section-box3"),
+            document.querySelector(".footer")
+        ]
+        for(let i = 0; i < result.length; i++) {
+            result[i].innerHTML += arr[i];
+        }
+
+        var obj = {
+            result : [
+                        {header_logo : document.querySelector(".header-logo")},
+                        {header_menu : document.querySelector(".header-menu")},
+                        {banner : document.querySelector(".banner")},
+                        {ad_box1 : document.querySelector(".ad-box1")},
+                        {ad_box2 : document.querySelector(".ad-box2")},
+                        {ad_box3 : document.querySelector(".ad-box3")},
+                        {ad_box4 : document.querySelector(".ad-box4")},
+                        {ad_box5 : document.querySelector(".ad-box5")},
+                        {ad_box6 : document.querySelector(".ad-box6")},
+                        {ad_box7 : document.querySelector(".ad-box7")},
+                        {section_box1 : document.querySelector(".section-box1")},
+                        {section_box2 : document.querySelector(".section-box2")},
+                        {section_box3 : document.querySelector(".section-box3")},
+                        {footer : document.querySelector(".footer")}
+                    ],   
+            arr : [
+            "로고", "메뉴", "이미지슬라이드", 
+            "광고", "기사1", "기사2", 
+            "기사3", "기사4", "기사5", 
+            "기사6", "기사7", "공지사항1",
+            "공지사항2", "공지사항3", "푸터"
+            ],
+            func : function() {
+                for(let i = 0; i < result.length; i++) {
+                       result[i].innerHTML += arr[i];
+                }
+            }  
+        }
+        obj.func();
+    }
+</script>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조합(combination)</title>
+    <title>체육복</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
     <script src="../assets/js/highlight.min.js"></script>
@@ -37,70 +37,107 @@
     <!-- //header -->
     <main id="main">    
         <div class="document">
-            <h2 class="t_tit">조합(combination)</h2>
-            <p class="t_desc2">
-                서로 다른 n개의 원소 중에서 r를 중복 없이 골라 <i>순서에 상관 없이</i> 나열하는 경우의 수
-            </p>
-            <p class="t_desc">
-                4개의 숫자 카드에서 2개를 뽑는 경우의수<br>
-            </p>
-            <h3 class="t_tit2">for문으로 이용한 조합 경우의수</h3>
+            <h2 class="t_tit">약수의 개수와 덧셈</h2>
+            <pre class="t_desc">점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 
+학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 
+4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.
+전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 
+체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
+            </pre>
+            <pre class="t_desc2">전체 학생의 수는 2명 이상 30명 이하입니다.
+체육복을 도난당한 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+여벌의 체육복을 가져온 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+여벌 체육복이 있는 학생만 다른 학생에게 체육복을 빌려줄 수 있습니다.
+여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. 이때 이 학생은 체육복을 하나만 도난당했다고 가정하며, 남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.
+</pre>
+
+                <hr>
+                <h3 class="t_tit2">입출력 예</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>n</th>
+                            <th>lost</th>
+                            <th>reserve</th>
+                            <th>return</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">[2, 4]</td>
+                            <td style="text-align: center;">[1, 3, 5]</td>
+                            <td style="text-align: center;">5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">[2, 4]</td>
+                            <td style="text-align: center;">[3]</td>
+                            <td style="text-align: center;">4</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">[3]</td>
+                            <td style="text-align: center;">[1]</td>
+                            <td style="text-align: center;">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+<pre class="t_desc2">예제 #1
+1번 학생이 2번 학생에게 체육복을 빌려주고, 3번 학생이나 5번 학생이 4번 학생에게 체육복을 빌려주면 학생 5명이 체육수업을 들을 수 있습니다.
+
+예제 #2
+3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
+</pre>
+
+            <hr>
+
+            <h3 class="t_tit2">체육복</h3>
             <div class="t_code">
-<pre><code class="language-js">    let input = [1, 2, 3, 4];
-    let count = 0;
-    let result;
-    let result_in = document.querySelector(".result01");
+<pre><code class="language-js">    function solution(n, lost, reserve) {
+    var answer = 0;
+    var uniform = [];
     
-    function permutation(arr) {
-        for(let i = 0; i &lt; arr.length; i++) {
-            for(let j = i + 1; j &lt; arr.length; j++){
-                    result = arr[i] + " " + arr[j] + "<br>";         
-                    count++;
-                    console.log(result); 
-            }
-        }
+    // 새로 배열을 만든 유니폼에 n명만큼 체육복 1 삽입.
+    for(let i=0; i &lt; n; i++){ 
+        uniform[i] = 1;
     }
-    permutation(input);
-    console.log(count); 
+    
+    //체유복이 없으면 1을빼고 여벌이 있으면 1을 더한다.
+    for(let i=0; i &lt; lost.length; i++) {
+        uniform[lost[i]-1] -= 1; // 배열은 0번째 인덱스부터 시작하니 -1을 해줘야한다.
+    }
+    for(let i=0; i &lt; reserve.length; i++) {
+        uniform[reserve[i]-1] += 1;
+    }
+    
+    //앞번호의 학생과 뒷번호의 학생의 여벌옷 등을 구별.
+    for(let i = 0; i &lt; n; i++){
+        if(uniform[i-1] == 2 && uniform[i] == 0) {
+            uniform[i-1] = 1;
+            uniform[i] = 1;
+            }
+        if(uniform[i+1] == 2 && uniform[i] == 0) {
+            uniform[i+1] = 1;
+            uniform[i] = 1;
+            } 
+    }
+    //출력
+    for(let i &lt; uniform.length; i++) {
+        if(uniform[i] &gt; 0) {
+            answer++;
+            }
+    }
+    
+    return answer;
+}
 </code></pre>
-                <div class="t_result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div class="result01"></div>
-                    </details>
-                </div>
+            <p class="t_box">
+                총평 : 배열을 이해하면 편하지만 아직 배열메소드를 이해하지못해서 하드코딩이 되어있는게 아쉽다.<br>
+                출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/42862" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/42862</a> 
+            </p>
             </div>
             <!-- //result01 -->
-            <h3 class="t_tit2">재귀함수 으로 이용한 조합 경우의수</h3>
-            <div class="t_code">
-<pre><code class="language-js">    let input = ["a", "b", "c"];
-    let ouput = [];
-    let count = 0;
-    result = document.querySelector(".result02");
-
-    function combination(arr, data, s, idx, r) {
-        if(s == r){
-            count++;
-            console.log(data + "<br>");
-        }
-        for(let i = 0; i >= r - s; i++){
-            data[s] = arr[i];
-            combination(arr, data, s + 1, i+1, r - 1);
-        }
-        
-    }
-    
-    combination(input, data, 0, 0, 2);
-    console.log("총 경우의수는 " + count);
-</code></pre>
-                <div class="t_result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div class="result02"></div>
-                    </details>
-                </div>
-            </div> 
-            <!-- // result02 -->
         </div>
     </main>
     <!-- //main -->
@@ -111,51 +148,7 @@
     <script>
     hljs.highlightAll();
     </script> 
-    <script>
-{
-    let input = [1, 2, 3, 4]; //4C2
-    let count = 0;
-    let result;
-    let result_in = document.querySelector(".result01");
-    
-    function permutation(arr) {
-        for(let i = 0; i < arr.length; i++) { //뽑는갯수
-            for(let j = i + 1; j < arr.length; j++){ // 마지막 인덱스에서 필터링
-                    result = arr[i] + " " + arr[j] + "<br>";         
-                    count++;
-                    result_in.innerHTML+=result;
-            }
-        }
-    }
-    
-    permutation(input);
-    result_in.innerHTML+="총 경우의 수는 " + count;
-    
-}
-{
 
-    // arr : input 데이터 , data : output 데이터, s : 시작 인덱스, idx : 현재 위치정보, r : 선택 개수
-    let input = [1, 2, 3, 4];
-    let output = [];
-    let count = 0;
-    result = document.querySelector(".result02");
-        function combinationRecursion(arr, data, s, idx, r) {
-            if (s === r) {
-                count++;
-                result.innerHTML += data + "<br>";
-                return;
-            }     
-            for (let i = idx; arr.length - i >= r - s; i++) {
-                data[s] = arr[i];
-                combinationRecursion(arr, data, s + 1, i + 1, r); // Recursion
-            }
-}
-
-combinationRecursion(input, output, 0, 0, 2); // Main Call
-result.innerHTML += "총 경우의수는 " + count;
-}
-
-    </script>
 </body>
 </body>
 </html>

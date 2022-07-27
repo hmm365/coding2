@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조합(combination)</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">for문</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">    
+        <div class="document">
+            <h2 class="t_tit">조합(combination)</h2>
+            <p class="t_desc2">
+                서로 다른 n개의 원소 중에서 r를 중복 없이 골라 <i>순서에 상관 없이</i> 나열하는 경우의 수
+            </p>
+            <p class="t_desc">
+                4개의 숫자 카드에서 2개를 뽑는 경우의수<br>
+            </p>
+            <h3 class="t_tit2">for문으로 이용한 조합 경우의수</h3>
+            <div class="t_code">
+<pre><code class="language-js">    let input = [1, 2, 3, 4];
+    let count = 0;
+    let result;
+    let result_in = document.querySelector(".result01");
+    
+    function permutation(arr) {
+        for(let i = 0; i &lt; arr.length; i++) {
+            for(let j = i + 1; j &lt; arr.length; j++){
+                    result = arr[i] + " " + arr[j] + "<br>";         
+                    count++;
+                    console.log(result); 
+            }
+        }
+    }
+    permutation(input);
+    console.log(count); 
+</code></pre>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result01"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //result01 -->
+            <h3 class="t_tit2">재귀함수 으로 이용한 조합 경우의수</h3>
+            <div class="t_code">
+<pre><code class="language-js">    let input = ["a", "b", "c"];
+    let ouput = [];
+    let count = 0;
+    result = document.querySelector(".result02");
+
+    function combination(arr, data, s, idx, r) {
+        if(s == r){
+            count++;
+            console.log(data + "<br>");
+        }
+        for(let i = 0; i >= r - s; i++){
+            data[s] = arr[i];
+            combination(arr, data, s + 1, i+1, r - 1);
+        }
+        
+    }
+    
+    combination(input, data, 0, 0, 2);
+    console.log("총 경우의수는 " + count);
+</code></pre>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result02"></div>
+                    </details>
+                </div>
+            </div> 
+            <!-- // result02 -->
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+    <script>
+{
+    let input = [1, 2, 3, 4]; //4C2
+    let count = 0;
+    let result;
+    let result_in = document.querySelector(".result01");
+    
+    function permutation(arr) {
+        for(let i = 0; i < arr.length; i++) { //뽑는갯수
+            for(let j = i + 1; j < arr.length; j++){ // 마지막 인덱스에서 필터링
+                    result = arr[i] + " " + arr[j] + "<br>";         
+                    count++;
+                    result_in.innerHTML+=result;
+            }
+        }
+    }
+    
+    permutation(input);
+    result_in.innerHTML+="총 경우의 수는 " + count;
+    
+}
+{
+
+    // arr : input 데이터 , data : output 데이터, s : 시작 인덱스, idx : 현재 위치정보, r : 선택 개수
+    let input = [1, 2, 3, 4];
+    let output = [];
+    let count = 0;
+    result = document.querySelector(".result02");
+        function combinationRecursion(arr, data, s, idx, r) {
+            if (s === r) {
+                count++;
+                result.innerHTML += data + "<br>";
+                return;
+            }     
+            for (let i = idx; arr.length - i >= r - s; i++) {
+                data[s] = arr[i];
+                combinationRecursion(arr, data, s + 1, i + 1, r); // Recursion
+            }
+}
+
+combinationRecursion(input, output, 0, 0, 2); // Main Call
+result.innerHTML += "총 경우의수는 " + count;
+}
+
+    </script>
+</body>
+</body>
+</html>
