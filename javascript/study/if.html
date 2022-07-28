@@ -34,6 +34,7 @@
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터타입</a></li>
                 <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">전역변수/지역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -73,7 +74,7 @@
 </code></pre>
                 </div>
             </div>
-
+            <!-- 1 -->
             <h3 class="t_tit2">중첩 if문</h3>
             <p class="t_desc">
                 중첩If문은 중첩으로 묶을수있습니다.
@@ -109,11 +110,15 @@
 }
 </code></pre>
             </div>
+            <!-- 2 -->
+
+            <hr>
+            
             <h3 class="t_tit2">switch 문</h3>
             <p class="t_desc">
                 switch문은 if문과 같이 조건 제어문에 속합니다.<br>
                 하지만 switch문은 if문처럼 조건식이 &gt;,&gt;=,&lt;,&lt;=와 같은 이상,이하,초과,미만같은 부등식이 사용될 수 없습니다.
-                </p>
+            </p>
             <p class="t_box">
                 switch (값){<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;case 값 :<br>
@@ -145,6 +150,41 @@
 }
 </code></pre>
             </div>
+            <!-- 3 -->
+
+            <hr>
+
+            <h3 class="t_tit2">break 와 continue</h3>
+            <p class="t_desc">
+                break 문은 동작하는 블록을 중지시킵니다.<br>
+                continue문 은 정지후 다음단계를 시작합니다.<br>
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">{
+    //break문
+    for(let i = 1; i &lt;= 20; i++) {
+        document.write(i + " ");
+        if( i == 10) {
+            break; // for문 전체 정지
+        }
+    }
+
+    //continue문
+    for(let i = 1; i &lt;= 20; i++) {
+        if( i == 10) {
+            continue; // 정지후 다음 단계로 시작
+        }
+        document.write(i + " ");
+    }
+}
+</code></pre>
+                    <div class="t_result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div class="result01"></div>
+                        </details>
+                    </div>      
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -166,7 +206,24 @@
         }
     </style>
     <script>
-
+        { 
+            //break문
+            let result = document.querySelector(".result01");
+            for(let i = 1; i <= 20; i++) {
+                result.innerHTML += (i + " ");
+                if( i == 10) {
+                    break; // for문 정지
+                }
+            }
+                result.innerHTML += "<br>";
+            //continue문
+            for(let i = 1; i <= 20; i++) {
+                if( i == 10) {
+                    continue; // 정지후 다음 단계로 시작
+                }
+                result.innerHTML += (i + " ");
+            }
+        }
     </script>
 </body>
 </html>

@@ -451,8 +451,15 @@
             left: 15%;
             border-radius: 50%;
         }
-
+        @media (max-height: 700px) {
+            main::before {
+                display: none;
+            }
+        }
         @media (max-width: 800px) {
+             main {
+                min-height: 800px;
+             }
             h1 {
                 margin-top: 10px;
                 font-size: 40px;

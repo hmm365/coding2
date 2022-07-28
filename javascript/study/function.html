@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 반복문</title>
+    <title>자바스크립트 함수</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
     <script src="../assets/js/highlight.min.js"></script>
@@ -34,6 +34,7 @@
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터타입</a></li>
                 <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">전역변수/지역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -141,7 +142,7 @@
         const str = "함수가 실행되었습니다."
         return str;
     }
-document.write(func());
+    document.write(func());
 </code></pre>
                 <div class="t_result">
                     <details>
@@ -287,7 +288,43 @@ document.write(func());
                     </details>
                 </div>
             </div>
-                <!-- //result08 -->
+            <!-- //result08 -->
+
+            <h3 class="t_tit2">함수 응용</h3>
+            <p class="t_box">
+                위에서 배운 아래와같이 함수방식들 응용할수있습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">    //화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+    // const func = (str) =&gt; { 
+    //     return str;
+    // }
+    // document.write(func("함수가 실행되었습니다.")); // 변수를 대신 직접 넣어도 된다.
+    
+    //화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+    // const func = str =&gt; { 
+    //     return str; 
+    // }
+    // document.write(func("함수가 실행되었습니다."));
+    
+    //화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 리턴 생략
+    // const func = str =&gt; str ;
+    // document.write(func("함수가 실행되었습니다."));
+
+    //화살표 함수 :선언적 함수 + 매개변수 + 리턴값 + 리턴 생략
+    func = str =&gt; str;
+    document.write(func("함수가 실행되었습니다."));
+</code></pre>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result09"></div>
+                    </details>
+                </div>
+            </div>
+            <!-- //result08 -->
+
+                
         </div>
     </main>
     <!-- //main -->
@@ -353,6 +390,25 @@ document.write(func());
             };  
             document.querySelector(".result08").innerHTML = func();
         }
+        //09. 함수응용
+        {
+            // const func = (str) => { 
+            //     return str;
+            // }
+            // document.querySelector(".sample09_result").innerHTML = func("함수가 실행되었습니다."); // 변수를 대신 직접 넣어도 된다.
+            
+            // const func = str => { 
+            //     return str; 
+            // }
+            // document.querySelector(".sample10_result").innerHTML = func("함수가 실행되었습니다.");
+            
+            // const func = str => str ;
+            // document.querySelector(".sample11_result").innerHTML = func("함수가 실행되었습니다.");
+
+            func = str => str;
+            document.querySelector(".result09").innerHTML = func("함수가 실행되었습니다.");
+        }
+
     </script>
 </body>
 </html>

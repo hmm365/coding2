@@ -34,6 +34,7 @@
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">전역변수/지역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -52,7 +53,7 @@
                 <li><a href="#sample09">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
                 <li><a href="#sample10">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
                 <li><a href="#sample11">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 리턴 생략</a></li>
-                <li><a href="#sample12">12. 선언적 함수 : 익명 함수 + 매개변수 + 리턴값 + 리턴 생략</a></li>
+                <li><a href="#sample12">12. 화살표 함수 :선언적 함수 + 매개변수 + 리턴값 + 리턴 생략</a></li>
                 <li><a href="#sample13">13. 내부 함수</a></li>
                 <li><a href="#sample14">14. 즉시 실행 함수</a></li>
                 <li><a href="#sample15">15. 파라미터 함수</a></li>
@@ -333,6 +334,94 @@
                 </div>
             </div> 
             <!-- //sample08 -->
+            <div id="sample09" class="sample">
+                <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+                <p>
+                   모든 함수는 여러개를 섞어서 쓸수있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const func = (str) => { 
+        return str;
+    }
+    document.write(func("함수가 실행되었습니다.")); // 변수를 대신 직접 넣어도 됩니다..
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample09_result">
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample09 -->
+            <div id="sample10" class="sample">
+                <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                <p>
+                   모든 함수는 여러개를 섞어서 쓸수있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const func = str => {  // 매개변수가 하나일때 괄호를 생략해도 됩니다.
+        return str;
+    }
+    document.write(func("함수가 실행되었습니다.")); 
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample10_result">
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample10 -->
+            <div id="sample11" class="sample">
+                <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 리턴 생략</h3>
+                <p>
+                   모든 함수는 여러개를 섞어서 쓸수있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const func = str => str ; // 리턴값이 하나면 괄호를 생략해도됩니다.
+    document.write(func("함수가 실행되었습니다."));
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample11_result">
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample11 -->
+            <div id="sample12" class="sample">
+                <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 리턴 생략</h3>
+                <p>
+                   모든 함수는 여러개를 섞어서 쓸수있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    func = str => str; // 선언적 함수도 적용됩니다.
+    document.write(func("함수가 실행되었습니다."));
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample12_result">
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample11 -->
         </div>
     </main>
     <!-- //main -->
@@ -464,6 +553,40 @@
             };  
             document.querySelector(".sample08_result").innerHTML = func();
         }
+
+        //이건 함수응용 제목으로 쓸것
+        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+        {
+            const func = (str) => { 
+                return str;
+            }
+            document.querySelector(".sample09_result").innerHTML = func("함수가 실행되었습니다."); // 변수를 대신 직접 넣어도 된다.
+        }
+        //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            const func = str => { 
+                return str; 
+            }
+            document.querySelector(".sample10_result").innerHTML = func("함수가 실행되었습니다.");
+        }
+        //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 리턴 생략
+        {
+            const func = str => str ;
+            document.querySelector(".sample11_result").innerHTML = func("함수가 실행되었습니다.");
+        }
+        //12. 화살표 함수 :선언적 함수 + 매개변수 + 리턴값 + 리턴 생략
+        {
+            func = str => str;
+            document.querySelector(".sample12_result").innerHTML = func("함수가 실행되었습니다.");
+        }
+        //13. 내부 함수
+        //14. 즉시 실행 함수
+        //15. 파라미터 함수
+        //16. 아규먼트 함수
+        //17. 재귀함수
+        //18. 콜백함수
+        //19. 콜백함수 : 반복문
+        //20. 콜백함수 : 동기/비동기
     </script>
 </body>
 </html>

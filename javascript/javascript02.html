@@ -34,6 +34,7 @@
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">전역변수/지역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -311,9 +312,9 @@
                 <div class="script">
 <pre><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
-    for(let i in arr){
-        document.write(i); //인덱스 출력
-    }
+    for(let i in arr){     
+        document.write(i); // 배열은 인덱스 출력, 객체는 Key 출력 
+    }                      // (배열도 객체처럼보면 0: 100, 1: 200...4: 500이므로 key 값을 출력하는거와 마찬가지입니다.)
 }
 </code></pre>
                 </div>
@@ -476,17 +477,24 @@
             });
         }
         //08. 배열 : 데이터 불러오기 : for of
-        {
+        {   
             const arr = [100, 200, 300, 400, 500];
+
             for(let i of arr){
                 //document.write(i + "<br>"); //value 출력
             }
         }
         //09. 배열 : 데이터 불러오기 : for in
         {
+            const obj = {
+                a: 100, 
+                b: 300,
+                c: "javascript",
+                d: 1000
+            };
             const arr = [100, 200, 300, 400, 500];
             for(let i in arr){
-                //document.write(arr[i] + "<br>"); //인덱스 출력
+                //document.write(arr[i] + "<br>"); // 배열은 인덱스 출력  객체는 키 출력
             }
         }
         //10. 배열 데이터 불러오기 : map();
@@ -509,7 +517,15 @@
                 //document.write(array + "의 " + index +"번째 요소 : " + element + "<br>");
             });
         }
-    
+        //11. 배열 : 데이터 불러오기 : 펼침연산자
+        //12. 배열 : 데이터 불러오기 : 배열구조분해할당
+        //13. 객체 : 데이터 불러오기 : 기본
+        //14. 객체 : 데이터 불러오기 : Objct
+        //15. 객체 : 데이터 불러오기 : 변수
+        //16. 객체 : 데이터 불러오기 : for in
+        //17. 객체 : 데이터 불러오기 : map()
+        //18. 객체 : 데이터 불러오기 : hasOwnProperty()
+
     </script>
 </body>
 </html>
