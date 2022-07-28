@@ -1,132 +1,132 @@
-<!DOCTYPEhtml>
-<htmllang="ko">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<metacharset="UTF-8">
-<metahttp-equiv="X-UA-Compatible"content="IE=edge">
-<metaname="viewport"content="width=device-width,initial-scale=1.0">
-<title>자바스크립트:데이터제어하기</title>
-<linkrel="stylesheet"href="assets/css/style.css">
-<linkrel="stylesheet"href="assets/css/dracula.css">
-<scriptsrc="assets/js/highlight.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 데이터 제어하기</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+    <script src="assets/js/highlight.min.js"></script>
 </head>
 <body>
-<headerid="header">
-<h1><ahref="index.html">Javascript</a></h1>
-<navclass="header_nav">
-<ul>
-<li><ahref="javascript01.html">데이터저장하기</a></li>
-<li><ahref="javascript02.html">데이터불러오기</a></li>
-<li><ahref="javascript03.html">데이터실행하기</a></li>
-<liclass="active"><ahref="javascript04.html">데이터제어하기</a></li>
-</ul>
-<ul>
-<li><ahref="javascript05.html">문자열객체</a></li>
-<li><ahref="javascript06.html">배열객체</a></li>
-<li><ahref="javascript07.html">수학객체</a></li>
-<li><ahref="javascript08.html">브라우저객체</a></li>
-<li><ahref="javascript09.html">요소객체</a></li>
-<li><ahref="javascript10.html">이벤트객체</a></li>
-</ul>
-<ulclass="study">
-<li><ahref="study/basic.html">기본규칙</a></li>
-<li><ahref="study/operator.html">연산자</a></li>
-<li><ahref="study/for.html">반복문</a></li>
-<li><ahref="study/if.html">조건문</a></li>
-<li><ahref="study/type.html">데이터타입</a></li>
-<li><ahref="study/function.html">함수</a></li>
-<li><ahref="study/var.html">전역변수/지역변수</a></li>
-</ul>
-</nav>
-</header>
-<!--//header-->
-<mainid="main">
-<divclass="main_menu">
-<ul>
-<li><ahref="#sample01">01.if문</a></li>
-<li><ahref="#sample02">02.if문생략</a></li>
-<li><ahref="#sample03">03.다중if문</a></li>
-<li><ahref="#sample04">04.중첩if문</a></li>
-<li><ahref="#sample05">05.삼항연산자</a></li>
-<li><ahref="#sample06">06.switch문</a></li>
-<li><ahref="#sample07">07.while문</a></li>
-<li><ahref="#sample08">08.dowhile문</a></li>
-<li><ahref="#sample09">09.for문</a></li>
-<li><ahref="#sample10">10.중첩for문</a></li>
-<li><ahref="#sample11">11.break문</a></li>
-<li><ahref="#sample12">12.continue문</a></li>
-</ul>
-</div>
-<divclass="main_sample">
-<divid="sample01"class="sample">
-<h3>01.if문</h3>
-<p>
-if문은조건식의결과에따라중괄호{}로묶어놓은블록이실행여부가결정되는조건문입니다.
-</p>
-<divclass="script">
-<pre><codeclass="language-js">{
-//true1,"1","0"
-//false0,undefined,null
-if(1){
-document.write("실행되었습니다(true).");
-}else{
-document.write("실행되었습니다(false).")
-}
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">브라우저 객체</a></li>
+                <li><a href="javascript09.html">요소 객체</a></li>
+                <li><a href="javascript10.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="study/basic.html">기본 규칙</a></li>
+                <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="study/for.html">반복문</a></li>
+                <li><a href="study/if.html">조건문</a></li>
+                <li><a href="study/type.html">데이터타입</a></li>
+                <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">전역변수/지역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="main_menu">
+            <ul>
+                <li><a href="#sample01">01. if문</a></li>
+                <li><a href="#sample02">02. if문 생략</a></li>
+                <li><a href="#sample03">03. 다중 if문</a></li>
+                <li><a href="#sample04">04. 중첩 if문</a></li>
+                <li><a href="#sample05">05. 삼항 연산자</a></li>
+                <li><a href="#sample06">06. switch문</a></li>
+                <li><a href="#sample07">07. while문</a></li>
+                <li><a href="#sample08">08. do while문</a></li>
+                <li><a href="#sample09">09. for문</a></li>
+                <li><a href="#sample10">10. 중첩 for문</a></li>
+                <li><a href="#sample11">11. break문</a></li>
+                <li><a href="#sample12">12. continue문</a></li>
+            </ul>
+        </div>
+        <div class="main_sample">
+            <div id="sample01" class="sample">
+                <h3>01. if문 </h3>
+                <p>
+                    if문은 조건식의 결과에 따라 중괄호 { } 로 묶어놓은 블록이 실행여부가 결정되는 조건문입니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    //true 1, "1", "0"
+    //false 0 , undefined, null
+    if(1) {
+        document.write("실행되었습니다(true).");
+    } else {
+        document.write("실행되었습니다(false).")
+    }
 }
 </code></pre>
-</div>
-<divclass="result">
-<details>
-<summary>결과보기</summary>
-<divclass="sample01_result">
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample01_result">
 
-</div>
-</details>
-</div>
-</div>
-<!--//sample01-->
-<divid="sample02"class="sample">
-<h3>02.if문생략</h3>
-<p>
-if문은조건식을생략할수있습니다.
-</p>
-<divclass="script">
-<pre><codeclass="language-js">{
-constnum=100;
-if(num){
-document.querySelector(".result02").innerHTML="실행되었습니다(true)."
-}else{
-document.querySelector(".result02").innerHTML="실행되었습니다(false).";
-}
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample01 -->
+            <div id="sample02" class="sample">
+                <h3>02. if문 생략</h3>
+                <p>
+                    if문은 조건식을 생략할수있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
+    if(num){
+        document.querySelector(".result02").innerHTML = "실행되었습니다(true)."
+    }else {
+        document.querySelector(".result02").innerHTML = "실행되었습니다(false).";
+    }
 </code></pre>
-</div>
-<divclass="result">
-<details>
-<summary>결과보기</summary>
-<divclass="sample02_result">
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample02_result">
 
-</div>
-</details>
-</div>
-</div>
-<!--//sample02-->
-<divid="sample03"class="sample">
-<h3>03.다중if문</h3>
-<p>
-다중if문은하나의if문에다른if문을추가할수있습니다.
-</p>
-<divclass="script">
-<pre><codeclass="language-js">{
-constnum=100;
-if(num){
-document.querySelector(".result02").innerHTML="실행되었습니다(true)."
-}else{
-document.querySelector(".result02").innerHTML="실행되었습니다(false).";
-}
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- //sample02 -->
+            <div id="sample03" class="sample">
+                <h3>03. 다중 if문</h3>
+                <p>
+                    다중 if문은 하나의 if문에 다른 if문을 추가할수있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
+    if(num){
+        document.querySelector(".result02").innerHTML = "실행되었습니다(true)."
+    }else {
+        document.querySelector(".result02").innerHTML = "실행되었습니다(false).";
+    }
 }
 </code></pre>
-</div>
-<divclass="result">
-             <details>
+                </div>
+                <div class="result">
+                    <details>
                         <summary>결과보기</summary>
                         <div class="sample03_result">
 
@@ -399,7 +399,7 @@ document.querySelector(".result02").innerHTML="실행되었습니다(false).";
     </footer>
     <!-- //footer -->
     <script>
-        hljs.highlightAll();
+        {hljs.highlightAll();}
     </script> 
     <script>
         //  (제어문  : 조건문, 반복문, 중지, 건너뛰기) 
