@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/tokyo-night-dark.min.css">
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">float를 이용한 레이아웃</h2>
+                <p class="t_desc">
+                    CSS 속성(property) float 은 한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가<br>
+                    그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다.
+                </p>
+                <div class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FHRZlRx2Y2dVmr0V2sfpKd1%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+                </div>
+
+                <hr>
+
+                <h3 class="t_tit2">레이아웃01</h3>
+                <p class="t_desc2">
+                   이번 레이아웃은 사이드메뉴가 하나 컨텐츠가 두개 들어간 구조입니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #FFB74D;
+    float: left;
+}
+#section{
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
+    float: left;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: #FF9800;
+    clear: both;
+}
+@media (max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section{
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                    <h3 class="t_tit2">결과</p>
+                    <div class="t_iframe">
+                        <iframe scrolling="no" title="레이아웃 01 folat" src="https://codepen.io/hmm365/embed/eYMEvJE?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/hmm365/pen/eYMEvJE">
+                            레이아웃 01 folat</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                          </iframe>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3 class="t_tit2">float를 이용한 레이아웃</h3>
+                <p class="t_desc2">
+
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #E8F5E9;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: #C8E6C9;
+}
+#nav {
+    width: 100%;
+    height: 100px;
+    background-color: #A5D6A7;
+}
+#aside {
+    width: 25%;
+    height: 780px;
+    background-color: #81C784;
+    float: left;
+}
+#section {
+    width: 50%;
+    height: 780px;
+    background-color: #66BB6A;
+    float: left;
+}
+#article {
+    width: 25%;
+    height: 780px;
+    background-color: #4CAF50;
+    float: left;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #43A047;
+    clear: both;
+}
+@media (max-width: 1220px){
+    #wrap {
+    width: 96%;
+    }
+}   
+@media (max-width: 768px){
+    #wrap {
+    width: 100%;
+    }
+    #aside {
+        width: 30%;
+    }
+    #section {
+        width: 70%;
+    }
+    #article {
+        width: 100%;
+        height: 150px;
+        clear: both;
+    }
+}
+@media (max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #section {
+        width: 100%;
+        height: 430px;
+    }
+}
+</code></pre>
+                    <h3 class="t_tit2">결과</p>
+                    <div class="t_iframe">
+                        <iframe scrolling="no" title="레이아웃02 float" src="https://codepen.io/hmm365/embed/abYyJdY?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/hmm365/pen/abYyJdY">
+                            레이아웃02 float</a> by hmm365 (<a href="https://codepen.io/hmm365">@hmm365</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                          </iframe>
+                    </div>
+                </div>
+
+                <hr>
+
+                
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

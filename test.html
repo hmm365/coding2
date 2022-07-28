@@ -1,124 +1,60 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            font-size: 30px;
-        }
-        #wrap {
-            width: 1200px;
-            margin: 0 auto;
-        }
-        #header {
-            width: 1200px;
-            height: 100px;
-            background-color: #8DFF93;
-            overflow: hidden;
-            text-align: center;
-            line-height: 100px;
-        }
-        #header .logo {
-            width: 300px;
-            height: 100px;
-            background-color: #00FF0C;
-            float: left;
-        }
-        #header .menu {
-            width: 900px;
-            height: 100px;
-            background-color: #8DFF93;
-            float: left;
-        }
-        #banner {
-            width: 1200px;
-            height: 400px;
-            background-color: #81F586;
-            text-align: center;
-            line-height: 400px;
-        }
-        #section {
-            width: 1200px;
-            height: 300px;
-            background-color: #B9FFBC;
-            text-align: center;
-            line-height: 300px;
-            overflow: hidden;
-        }
-        #section .box1 {
-            width: 400px;
-            height: 300px;
-            background-color: #EAFFEB;
-            float: left;
-        }
-        #section .box2 {
-            width: 400px;
-            height: 300px;
-            background-color: #D6FFD8;
-            float: left;
-        }
-        #section .box3 {
-            width: 400px;
-            height: 300px;
-            background-color: #B9FFBC;
-            float: left;
-        }
-        #footer {
-            width: 1200px;
-            height: 100px;
-            background-color: #97FF9C;
-            overflow: hidden;
-        }
-        #footer .footer1 {
-            width: 200px;
-            height: 100px;
-            background-color: #B9FFBC;
-            text-align: center;
-            line-height: 100px;
-            float: left;
-        }
-        #footer .footer2 {
-            width: 800px;
-            height: 100px;
-            background-color: #97FF9C;
-            text-align: center;
-            line-height: 100px;
-            float: left;
-        }
-        #footer .footer3 {
-            width: 200px;
-            height: 100px;
-            background-color: #EAFFEB;
-            text-align: center;
-            line-height: 100px;
-            float: left;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div id="wrap">
-        <div id="header">
-            <div class="logo">로고</div>
-            <div class="menu">메뉴</div>
-        </div>
-        <div id="banner">
-            이미지슬라이드
-        </div>
-        <div id="section">
-            <div class="box1">공지사항</div>
-            <div class="box2">갤러리</div>
-            <div class="box3">팝업</div>
-        </div>
-        <div id="footer">
-            <div class="footer1">로고</div>
-            <div class="footer2">카페라이트</div>
-            <div class="footer3">소셜미디어</div>
-        </div>
-    </div>
+    <script>
+        {   //선언
+            function func() {
+                document.write("선언적 함수 실행.<br>");
+            }
+            func();
+        }
+        {   // 익명
+            const func = function() {
+                document.write("익명 함수 실행.<br>");
+            }
+            func();
+        }
+        {   //매개
+            let value = "매개변수 함수 실행.<br>";
+            function func(as) {
+                document.write(as);
+            }
+            func(value);
+        }
+        {   //리턴
+            function func() {
+                let value = "리턴값 함수 실행.<br>";
+                return value;
+            }
+            document.write(func());
+        }
+        {   //화살표
+            func = () => { document.write("화살표 함수 실행.<br>"); }
+            func();
+        }
+        {   //화살표 익명
+            const func = () =>  document.write("화살표 익명 함수 실행.<br>");
+            func();
+        }
+        {   //화살표 매개
+            let value = "화살표 매개 함수 실행.<br>";
+            func = as => document.write(as); 
+            func(value);
+        }
+        {
+            //화살표 리턴
+            func = () => { 
+                let value = "화살표 리턴값 함수 실행.<br>";
+                return value;
+            }
+            document.write(func());
+        }
+    </script>
 </body>
 </html>

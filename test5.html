@@ -188,10 +188,10 @@
     {
         const arr = [
             "로고", "메뉴", "이미지슬라이드", 
-            "광고", "기사1", "기사2", 
-            "기사3", "기사4", "기사5", 
-            "기사6", "기사7", "공지사항1",
-            "공지사항2", "공지사항3", "푸터"
+            "기사1", "기사2", "기사3", 
+            "기사4", "기사5", "기사6", 
+            "기사7", "공지사항1", "공지사항2", 
+            "공지사항3", "푸터"
         ];
         let result = [
             document.querySelector(".header-logo"),
@@ -213,37 +213,86 @@
             result[i].innerHTML += arr[i];
         }
 
-        var obj = {
-            result : [
-                        {header_logo : document.querySelector(".header-logo")},
-                        {header_menu : document.querySelector(".header-menu")},
-                        {banner : document.querySelector(".banner")},
-                        {ad_box1 : document.querySelector(".ad-box1")},
-                        {ad_box2 : document.querySelector(".ad-box2")},
-                        {ad_box3 : document.querySelector(".ad-box3")},
-                        {ad_box4 : document.querySelector(".ad-box4")},
-                        {ad_box5 : document.querySelector(".ad-box5")},
-                        {ad_box6 : document.querySelector(".ad-box6")},
-                        {ad_box7 : document.querySelector(".ad-box7")},
-                        {section_box1 : document.querySelector(".section-box1")},
-                        {section_box2 : document.querySelector(".section-box2")},
-                        {section_box3 : document.querySelector(".section-box3")},
-                        {footer : document.querySelector(".footer")}
-                    ],   
-            arr : [
-            "로고", "메뉴", "이미지슬라이드", 
-            "광고", "기사1", "기사2", 
-            "기사3", "기사4", "기사5", 
-            "기사6", "기사7", "공지사항1",
-            "공지사항2", "공지사항3", "푸터"
-            ],
+        const obj = {
+            logo : "로고",
+            menu : "메뉴",
+            banner : "이미지슬라이드",
+            ad_box1 : "기사1",
+            ad_box2 : "기사2",
+            ad_box3 : "기사3",
+            ad_box4 : "기사4",
+            ad_box5 : "기사5",
+            ad_box6 : "기사6",
+            ad_box7 : "기사7",
+            section_box1 : "공지사항1",
+            section_box2 : "공지사항2",
+            section_box3 : "공지사항3",
+            footer : "푸터",
+
             func : function() {
-                for(let i = 0; i < result.length; i++) {
-                       result[i].innerHTML += arr[i];
+                let i = 0;
+                for(let ob in obj) {
+                    console.log(obj[ob]);
+                    while(i < result.length){
+                        console.log(i);
+                        result[i].innerHTML += obj[ob];
+                        i++
+                        break; 
+                    }
                 }
             }  
         }
         obj.func();
+
+        const obbj = {
+            logo : "로고",
+            menu : "메뉴",
+            banner : "이미지슬라이드",
+            ad_box1 : "기사1",
+            ad_box2 : "기사2",
+            ad_box3 : "기사3",
+            ad_box4 : "기사4",
+            ad_box5 : "기사5",
+            ad_box6 : "기사6",
+            ad_box7 : "기사7",
+            section_box1 : "공지사항1",
+            section_box2 : "공지사항2",
+            section_box3 : "공지사항3",
+            footer : "푸터", 
+
+            a : document.querySelector(".header-logo"),
+            b : document.querySelector(".header-menu"),
+            c : document.querySelector(".banner"),
+            d : document.querySelector(".ad-box1"),
+            e : document.querySelector(".ad-box2"),
+            f : document.querySelector(".ad-box3"),
+            g : document.querySelector(".ad-box4"),
+            h : document.querySelector(".ad-box5"),
+            j : document.querySelector(".ad-box6"),
+            k : document.querySelector(".ad-box7"),
+            l : document.querySelector(".section-box1"),
+            m : document.querySelector(".section-box2"),
+            o : document.querySelector(".section-box3"),
+            p : document.querySelector(".footer"),
+
+            func : function() {
+                obbj.a.innerHTML += obbj.logo;
+                obbj.b.innerHTML += obbj.menu;
+                obbj.c.innerHTML += obbj.banner;
+                obbj.d.innerHTML += obbj.ad_box1;
+                obbj.e.innerHTML += obbj.ad_box2;
+                obbj.f.innerHTML += obbj.ad_box3;
+                obbj.g.innerHTML += obbj.ad_box4;
+                obbj.h.innerHTML += obbj.ad_box5;
+                obbj.j.innerHTML += obbj.ad_box6;
+                obbj.k.innerHTML += obbj.ad_box6;
+                obbj.l.innerHTML += obbj.section_box1;
+                obbj.m.innerHTML += obbj.section_box2;
+                obbj.o.innerHTML += obbj.section_box3;
+                obbj.p.innerHTML += obbj.footer;    
+            }
+        }
+        obbj.func();
     }
 </script>
 </html>
