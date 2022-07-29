@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            width: inherit;
+            height: 100px;
+            background-color: #F48080;
+        }
+        #slide {
+            width: inherit;
+            height: 400px;
+            background-color: #EC5C5C;
+        }
+        #article {
+            width: inherit;
+            height: 500px;
+            background-color: #FEA5A5;
+        }
+        #section {
+            width: inherit;
+            height: 500px;
+            background-color: #FFBFBF;
+        }
+        #footer {
+            width: inherit;
+            height: 100px;
+            background-color: #FF9C9C;
+        }
+
+        #header .logo {
+            float: left;
+            background-color: #F86464;
+            width: 300px;
+            height: 100px;
+        }
+        #header .menu {
+            float: left;
+            background-color: #FEA5A5;
+            width: 900px;
+            height: 100px;
+        }
+        #slide .slide {
+            background-color: #FF8A8A;
+            width: 1200px;
+            height: 400px;
+        }
+        #article .a_top {
+            background-color: #C66868;
+            width: 1200px;
+            height: 250px;
+        }
+        #article .a_bot {
+            background-color: #EA7F7F;
+            width: 1200px;
+            height: 250px;
+        }
+        #section .box_container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #section .box1 {
+            float: left;
+            background-color: #EB6666;
+            width: 740px;
+            height: 500px;
+        }
+        #section .box2 {
+            float: left;
+            background-color: #CE5F5F;
+            width: 460px;
+            height: 250px;
+        }
+        #section .box3 {
+            float: left;
+            background-color: #FE7F7F;
+            width: 460px;
+            height: 250px;
+        }
+        #footer .foo {
+            background-color: #F86464;
+            width: 1200px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="logo"></div>
+                <div class="menu"></div>
+            </div>
+        </div>
+        <div id="slide">
+            <div class="container">
+                <div class="slide"></div>
+            </div>
+        </div>
+        <div id="article">
+            <div class="container">
+                <div class="a_top"></div>
+                <div class="a_bot"></div>
+            </div>
+        </div>
+        <div id="section">
+            <div class="container">
+                <div class="box1"></div>
+                <div class="box_container">
+                    <div class="box2"></div>
+                    <div class="box3"></div>
+            </div>
+                
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="foo"></div>
+            </div>
+        </div> 
+    </div>
+    
+</body>
+
+</html>

@@ -4,141 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>레이아웃5</title>
     <style>
-        * {
+        *{
+            box-sizing: 0;
             padding: 0;
             margin: 0;
         }
-        
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main {
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer {
+            height: 100px;
+            background-color: #3E2723;
+        }
         .container {
             width: 1200px;
             height: inherit;
             margin: 0 auto;
+            background-color: rgba(0,0,0,0.3);
         }
-
-        #wrap {
-            width: 100%;
+        .contents {
+            display: grid;
+            grid-template-areas: 
+            "cont1 cont1"
+            "cont2 cont2"
+            "cont3 cont4"
+            ;
+            grid-template-columns: 50% 50%; 
+            grid-template-rows: 100px 200px 480px;
         }
-        #header {
-            width: inherit;
-            height: 100px;
-            background-color: #F48080;
+        .contents .cont1 {
+            background-color: #74574A;
+            grid-area: cont1;
         }
-        #slide {
-            width: inherit;
-            height: 400px;
-            background-color: #EC5C5C;
+        .contents .cont2 {
+            background-color: #684D43;
+            grid-area: cont2;
         }
-        #article {
-            width: inherit;
-            height: 500px;
-            background-color: #FEA5A5;
+        .contents .cont3 {
+            background-color: #594139;
+            grid-area: cont3;
         }
-        #section {
-            width: inherit;
-            height: 500px;
-            background-color: #FFBFBF;
+        .contents .cont4 {
+            background-color: #4A352F;
+            grid-area: cont4;
         }
-        #footer {
-            width: inherit;
-            height: 100px;
-            background-color: #FF9C9C;
+        
+        @media (max-width: 1220px) {
+            .container {
+                width: 96%;
+            }
+            .contents {
+                display: grid;
+                grid-template-areas: 
+                "cont1 cont2 cont2"
+                "cont1 cont3 cont4"
+                ;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 390px 390px
+            }
         }
-
-        #header .logo {
-            float: left;
-            background-color: #F86464;
-            width: 300px;
-            height: 100px;
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            .contents {
+                display: grid;
+                grid-template-areas: 
+                "cont1 cont2"
+                "cont1 cont3"
+                "cont1 cont4"
+                ;
+                grid-template-columns: 30% 70%; 
+                grid-template-rows: repeat(3, 1fr);
+            }
         }
-        #header .menu {
-            float: left;
-            background-color: #FEA5A5;
-            width: 900px;
-            height: 100px;
+        @media (max-width: 480px) {
+            .contents {
+                display: grid;
+                grid-template-areas: 
+                "cont1"
+                "cont2"
+                "cont3"
+                "cont4"
+                ;
+                grid-template-columns: 100%; 
+                grid-template-rows: 150px 210px 210px 210px;
+            }
         }
-        #slide .slide {
-            background-color: #FF8A8A;
-            width: 1200px;
-            height: 400px;
-        }
-        #article .a_top {
-            background-color: #C66868;
-            width: 1200px;
-            height: 250px;
-        }
-        #article .a_bot {
-            background-color: #EA7F7F;
-            width: 1200px;
-            height: 250px;
-        }
-        #section .box_container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        #section .box1 {
-            float: left;
-            background-color: #EB6666;
-            width: 740px;
-            height: 500px;
-        }
-        #section .box2 {
-            float: left;
-            background-color: #CE5F5F;
-            width: 460px;
-            height: 250px;
-        }
-        #section .box3 {
-            float: left;
-            background-color: #FE7F7F;
-            width: 460px;
-            height: 250px;
-        }
-        #footer .foo {
-            background-color: #F86464;
-            width: 1200px;
-            height: 100px;
-        }
-
+        
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
-            <div class="container">
-                <div class="logo"></div>
-                <div class="menu"></div>
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="contents container">
+                <div class="cont1"></div>
+                <div class="cont2"></div>
+                <div class="cont3"></div>
+                <div class="cont4"></div>
             </div>
-        </div>
-        <div id="slide">
-            <div class="container">
-                <div class="slide"></div>
-            </div>
-        </div>
-        <div id="article">
-            <div class="container">
-                <div class="a_top"></div>
-                <div class="a_bot"></div>
-            </div>
-        </div>
-        <div id="section">
-            <div class="container">
-                <div class="box1"></div>
-                <div class="box_container">
-                    <div class="box2"></div>
-                    <div class="box3"></div>
-            </div>
-                
-            </div>
-        </div>
-        <div id="footer">
-            <div class="container">
-                <div class="foo"></div>
-            </div>
-        </div> 
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
     </div>
-    
 </body>
-
 </html>

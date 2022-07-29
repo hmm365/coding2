@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음양 더하기</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">브라우저 객체</a></li>
+                <li><a href="../javascript09.html">요소 객체</a></li>
+                <li><a href="../javascript10.html">이벤트 객체</a></li>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">for문</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">    
+        <div class="document">
+            <h2 class="t_tit">음양 더하기</h2>
+<pre class="t_desc">어떤 정수들이 있습니다. 
+이 정수들의 절댓값을 차례대로 담은 정수 배열 absolutes와 이 정수들의 부호를 차례대로 담은 불리언 배열 signs가 매개변수로 주어집니다.
+실제 정수들의 합을 구하여 return 하도록 solution 함수를 완성해주세요.
+</pre>
+<pre class="t_desc2">absolutes의 길이는 1 이상 1,000 이하입니다.
+absolutes의 모든 수는 각각 1 이상 1,000 이하입니다.
+signs의 길이는 absolutes의 길이와 같습니다.
+signs[i] 가 참이면 absolutes[i] 의 실제 정수가 양수임을, 그렇지 않으면 음수임을 의미합니다.
+</pre>
+
+                <hr>
+                <h3 class="t_tit2">입출력 예</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>absolutes</th>
+                            <th>signs</th>
+                            <th>result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">[4,7,12]</td>
+                            <td style="text-align: center;">[true,false,true]</td>
+                            <td style="text-align: center;">9</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">[1,2,3]</td>
+                            <td style="text-align: center;">[false,false,true]</td>
+                            <td style="text-align: center;">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+<pre class="t_desc2">입출력 예 #1
+signs가 [true,false,true] 이므로, 실제 수들의 값은 각각 4, -7, 12입니다.
+따라서 세 수의 합인 9를 return 해야 합니다.
+
+입출력 예 #2
+
+signs가 [false,false,true] 이므로, 실제 수들의 값은 각각 -1, -2, 3입니다.
+따라서 세 수의 합인 0을 return 해야 합니다.
+</pre>
+
+            <hr>
+
+            <h3 class="t_tit2">음양더하기</h3>
+            <div class="t_code">
+<pre><code class="language-js">    function solution(absolutes, signs) {
+    var answer = 0;
+    for(let i=0; i &lt; absolutes.length; i++) {  // absolutes의 끝까지 반복
+        if(signs[i] == false ) answer -= absolutes[i]; signs i 가 false 하고 같으면 absolutes[i] 를뺌
+            else  answer += absolutes[i];
+    }
+    return answer;
+}
+}
+</code></pre>
+            <p class="t_box">
+                총평 : 조건문으로 비교를 한후 더하면 편한다.<br>
+                출처 : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/42576" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/42576</a> 
+            </p>
+            </div>
+            <!-- //result01 -->
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:happyham52@gmail.com">happyham52@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+    hljs.highlightAll();
+    </script> 
+
+</body>
+</body>
+</html>
